@@ -1,0 +1,9 @@
+@use "../commons/_mixins.scss" as mixins;
+
+.footer {
+    background-color: var(--dark);
+    padding-top: 56px;
+    @include mixins.desktop {
+        padding-top: 80px;
+    }
+}

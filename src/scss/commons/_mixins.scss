@@ -1,0 +1,93 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+@mixin flex-stretch {
+  display: flex;
+  align-items: stretch;
+}
+@mixin flex-center-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin flex-column-center-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin pseudo-right {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin pseudo-left {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin hover {
+  @media (hover: hover) {
+    transition: all 0.1s linear;
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-big {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-big {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin desktop-fullhd {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

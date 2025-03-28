@@ -1,0 +1,9 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding-top: 56px;
+}

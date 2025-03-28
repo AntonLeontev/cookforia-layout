@@ -1,0 +1,54 @@
+@use "./_var.scss" as v;
+@use "./_mixins.scss" as mixins;
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #FFB914;
+  --green: #60B045;
+  --blue: #5AB1EE;
+  --gray: #737373;
+  --dark: #1E1E1E;
+  --text-dark: #212529;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: v.$jost;
+  font-size: 16px;
+  font-feature-settings: "tnum";
+  font-variant: tabular-nums;
+  line-height: 1.4;
+  color: var(--dark);
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.main {
+  flex: 1 0 auto;
+}
+.container {
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1580px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include mixins.tablet {
+    padding: 0 24px;
+  }
+  &--flex {
+    @include mixins.flex-center;
+  }
+}

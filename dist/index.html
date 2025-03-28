@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Демонстрационная научная конференция</title>
+  <meta name="theme-color" content="#141414">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <script src="js/app.min.js" defer></script>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <header class="header">
+      <div class="container header-inner">
+        <div class="header__logo">
+          <img src="img/logo.png" alt="Санкт-Петербургский государственный университет">
+          <span>Санкт-Петербургский государственный университет</span>
+        </div>
+        <button class="header__burger js-burgerBtn" type="button" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="descriptor">
+        <div class="descriptor__img" style="background-image:url(img/descriptor.png)"></div>
+        <div class="descriptor__shadow" style="background: #00000080;"></div>
+        <div class="container">
+          <div class="descriptor__inner">
+            <h1 class="descriptor__title">
+              <img src="img/descriptor-logo.png" alt="">
+              <span>Демонстрационная научная конференция</span>
+            </h1>
+            <p class="descriptor__text">
+              <img src="img/icons/сalendar.svg" alt="">
+              <span>20 мар 2025 - 22 мар 2025</span>
+            </p>
+            <a class="descriptor__link" href="#">Записаться на конференцию </a>
+          </div>
+        </div>
+      </section>
+      <nav class="nav js-burger">
+        <ul class="nav__inner">
+          <li class="nav__item">
+            <a class="nav__link active" href="#">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Спикеры и доклады</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Программа</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Программный комитет</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__info">
+              <h2 class="contacts__title">Контакты</h2>
+              <div class="contacts__item">
+                <span class="contacts__label">Телефон приемной комитета:</span>
+                <a class="contacts__link" href="tel:+79120005623">+7-912-000-56-23</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__label">Написать на еmail:</span>
+                <a class="contacts__link" href="mailto:aner-ant@ya.ru">aner-ant@ya.ru</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__label">Адрес проведения конференции:</span>
+                <a class="contacts__link" href="https://yandex.ru/maps/-/CHRZ4Tk8">Санкт-Петербург, Ленинский проспект, 20</a>
+              </div>
+              <a class="contacts__geo" href="#">Как добраться</a>
+            </div>
+            <div class="contacts__map" id="map"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <foooter class="footer">
+      <div class="footer__img" style="background-image:url(img/footer.webp)"></div>
+      <div class="footer__shadow" style="background: #00000099;"></div>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <img src="img/logo-text.png" alt="Санкт-Петербургский государственный университет">
+          </div>
+          <div class="footer__contacts">
+            <h2 class="footer__title">Контакты</h2>
+            <div class="footer__item">
+              <span class="footer__label">Телефон:</span>
+              <a class="footer__link" href="tel:+79120005623">+7-912-000-56-23</a>
+            </div>
+            <div class="footer__item">
+              <span class="footer__label">Email:</span>
+              <a class="footer__link" href="mailto:aner-ant@ya.ru">aner-ant@ya.ru</a>
+            </div>
+            <div class="footer__item">
+              <span class="footer__label">Адрес:</span>
+              <a class="footer__link" href="https://yandex.ru/maps/-/CHRZ4Tk8">Россия, 199034, Санкт-Петербург, Университетская наб., д. 7–9</a>
+            </div>
+          </div>
+          <div class="footer__info">
+            <div class="footer__copyright">&copy;&nbsp;Управление по&nbsp;организации публичных мероприятий и&nbsp;сотрудничества с&nbsp;партнерами СПбГУ, 2024</div>
+            <a class="footer__agreement" href="#" target="_blank">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+    </foooter>
+    <section class="portal">
+      <div class="container">
+        <a class="portal__logo" href="#">
+          <b>UCP</b>
+          <span>Universal Conference Portal </span>
+        </a>
+      </div>
+    </section>
+    <script src="https://api-maps.yandex.ru/2.1.45/?lang=ru_RU" type="text/javascript"></script>
+    <script>ymaps.ready(function () {
+  var myMapInf = new ymaps.Map('map', {
+    center: [59.852081, 30.238487],
+    zoom: 14,
+    controls: []
+  }, {
+    searchControlProvider: 'yandex#search'
+  }),
+    myPlacemarkInf = new ymaps.Placemark(myMapInf.getCenter(), {
+      hintContent: 'Санкт-Петербург, Ленинский проспект, 20',
+      balloonContent: 'Санкт-Петербург, Ленинский проспект, 20'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/geo.png',
+      iconImageSize: [24, 24],
+      iconImageOffset: [-12, -24]
+    });
+  myMapInf.geoObjects.add(myPlacemarkInf);
+  myMapInf.behaviors.disable('scrollZoom');
+  if ($(window).width() <= 1170) {
+    myMapInf.behaviors.disable('drag');
+  }
+  var zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      size: "large",
+      position: {
+        right: 20,
+        top: 100
+      }
+    }
+  });
+  myMapInf.controls.add(zoomControl);
+});
+      </script>
+  </div>
+</body>
+
+</html>

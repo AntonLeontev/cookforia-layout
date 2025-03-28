@@ -1,0 +1,17 @@
+$jost: "Jost", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+ Helvetica Neue, Helvetica, Arial, sans-serif;
+  
+//  Адаптив
+$tablet: 768px;
+$tablet-big: 1024px;
+$desktop: 1280px;
+$desktop-big: 1600px;
+
+//z-index
+$ui-index-1: 1; // для элементов наползающих друг на друга
+$ui-index-2: 2; // для элементов наползающих друг на друга
+$ui-index-3: 3; // для элементов наползающих друг на друга
+$ui-index-4: 4; // затемнения
+$ui-index-5: 5; // сайдбары
+$ui-index-6: 6; // модальные окна
+$ui-index-10: 10; // элементы перекрывающие все
