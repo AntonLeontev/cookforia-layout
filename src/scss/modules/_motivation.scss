@@ -1,0 +1,92 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.motivation {
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        @include mixins.desktop {
+            font-size: 40px;
+        }
+    }
+    &__items {
+        @include mixins.desktop {
+            margin-top: 74px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 22px;
+        padding: 30px 0 20px;
+        border-bottom: 2px solid var(--yellow);
+        @include mixins.desktop {
+            gap: 50px;
+            padding: 30px;
+            width: calc(33.3333%);
+            &:nth-child(n + 4) {
+                border-bottom: 0;
+            }
+            &:nth-child(2), &:nth-child(5) {
+                border-right: 2px solid var(--yellow);
+                border-left: 2px solid var(--yellow);
+            }
+        }
+    }
+    &__icon {
+        flex:  0 0 44px;
+        width: 44px;
+        @include mixins.desktop {
+            flex:  0 0 50px;
+            width: 50px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__text {
+        margin-top: 10px;
+        @include mixins.desktop {
+            font-size: 18px;
+            margin-top: 16px;
+        }
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--yellow);
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__content {
+        margin-top: 40px;
+        @include mixins.desktop {
+            margin-top: 80px;
+            text-align: center;
+        }
+        & h4 {
+            font-size: 20px;
+            @include mixins.desktop {
+                font-size: 36px;
+            }
+        }
+        & p {
+            margin-top: 20px;
+            @include mixins.desktop {
+                font-size: 24px;
+            }
+        }
+    }
+}

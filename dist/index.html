@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Демонстрационная научная конференция</title>
-  <meta name="theme-color" content="#141414">
+  <title>Кулинарная студия Cookforia</title>
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,149 +15,235 @@
 
 <body class="body">
   <div class="wrapper">
-    <header class="header">
-      <div class="container header-inner">
-        <div class="header__logo">
-          <img src="img/logo.png" alt="Санкт-Петербургский государственный университет">
-          <span>Санкт-Петербургский государственный университет</span>
+    <header class="header js-header header--nobg">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="/">
+            <img src="img/icons/logo.svg" alt="Cookforia">
+          </a>
+          <button class="header__burger js-burger" type="button">
+            <span>Меню</span>
+          </button>
+          <ul class="header__links">
+            <li class="header__link">
+              <a href="#">Мастер-классы </a>
+            </li>
+            <li class="header__link">
+              <a href="#">Мероприятия</a>
+            </li>
+            <li class="header__link">
+              <a href="#">Сертификат</a>
+            </li>
+          </ul>
+          <a class="header__phone" href="tel:+78126113908">
+            <span>+7 (812) 611-39-08</span>
+          </a>
+          <ul class="header__socials">
+            <li class="header__social header__social--tg">
+              <a href="#" target="_blank" aria-label="telegram"> </a>
+            </li>
+            <li class="header__social header__social--instagram">
+              <a href="#" target="_blank" aria-label="instagram"> </a>
+            </li>
+            <li class="header__social header__social--vk">
+              <a href="#" target="_blank" aria-label="vk"> </a>
+            </li>
+          </ul>
+          <a class="header__callback" href="#">Обратный звонок </a>
         </div>
-        <button class="header__burger js-burgerBtn" type="button" aria-label="Открыть меню"></button>
       </div>
     </header>
+    <nav class="nav js-nav">
+      <div class="nav__inner">
+        <button class="nav__close js-navClose" type="button" aria-label="Закрыть"></button>
+        <a class="nav__home" href="/">Главная </a>
+        <div class="nav__menu">
+          <ul class="nav__items">
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <a class="nav__link" href="#">Мероприятия</a>
+                <button class="nav__opener js-navToggle" type="button" aria-label="Список мероприятий"></button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">День рождения</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Свидание</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Тимбилдинг</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Детский праздник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Кулинарная вечеринка</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <button class="nav__opener js-navToggle" type="button">Индивидуальные мастер классы</button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Расписание сборных мастер-классов</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Кейтеринг</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Аренда студии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Рецепты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Блог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Меню</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Сертификаты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Акции</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__footer">
+          <div class="nav__callback">Заказать мероприятие</div>
+        </div>
+      </div>
+    </nav>
     <main class="main">
-      <section class="descriptor">
-        <div class="descriptor__img" style="background-image:url(img/descriptor.png)"></div>
-        <div class="descriptor__shadow" style="background: #00000080;"></div>
+      <section class="descriptor" style="background-image: url(../img/index/descriptor.webp)">
         <div class="container">
           <div class="descriptor__inner">
-            <h1 class="descriptor__title">
-              <img src="img/descriptor-logo.png" alt="">
-              <span>Демонстрационная научная конференция</span>
-            </h1>
-            <p class="descriptor__text">
-              <img src="img/icons/сalendar.svg" alt="">
-              <span>20 мар 2025 - 22 мар 2025</span>
-            </p>
-            <a class="descriptor__link" href="#">Записаться на конференцию </a>
+            <h1 class="descriptor__title">Кулинарная студия Cookforia</h1>
+            <p class="descriptor__text">Научитесь готовить под руководством лучших шеф-поваров города</p>
+            <div class="descriptor__links descriptor__links--noline">
+              <a class="descriptor__link" href="#">Заказать мероприятие</a>
+              <a class="descriptor__link" href="#">Мастер-классы</a>
+            </div>
           </div>
         </div>
       </section>
-      <nav class="nav js-burger">
-        <ul class="nav__inner">
-          <li class="nav__item">
-            <a class="nav__link active" href="#">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Контакты</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Спикеры и доклады</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Программа</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Программный комитет</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="content">
+      <section class="section motivation">
         <div class="container">
-          <div class="contacts">
-            <div class="contacts__info">
-              <h2 class="contacts__title">Контакты</h2>
-              <div class="contacts__item">
-                <span class="contacts__label">Телефон приемной комитета:</span>
-                <a class="contacts__link" href="tel:+79120005623">+7-912-000-56-23</a>
-              </div>
-              <div class="contacts__item">
-                <span class="contacts__label">Написать на еmail:</span>
-                <a class="contacts__link" href="mailto:aner-ant@ya.ru">aner-ant@ya.ru</a>
-              </div>
-              <div class="contacts__item">
-                <span class="contacts__label">Адрес проведения конференции:</span>
-                <a class="contacts__link" href="https://yandex.ru/maps/-/CHRZ4Tk8">Санкт-Петербург, Ленинский проспект, 20</a>
-              </div>
-              <a class="contacts__geo" href="#">Как добраться</a>
+          <div class="motivation__inner">
+            <h2 class="motivation__title">В&nbsp;студии Cookforia кулинария&nbsp;&mdash; это не&nbsp;просто еда, а&nbsp;целая история эмоций и&nbsp;впечатлений! Приходите, и&nbsp;убедитесь сами!</h2>
+            <ul class="motivation__items">
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation1.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">Для любого повода</h5>
+                  <p class="motivation__text">Любое частное мероприятие
+                    <br> Корпоратив или выпускной
+                    <br> Детский праздник
+                    <br> День рождения
+                  </p>
+                </div>
+              </li>
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation2.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">Большой выбор меню различных кухонь мира</h5>
+                  <a class="motivation__link" href="menu.html">Смотреть меню </a>
+                </div>
+              </li>
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation3.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">От 2 до 60 человек</h5>
+                  <p class="motivation__text">Индивидуальный кулинарный мастер-класс для вашей компании</p>
+                </div>
+              </li>
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation4.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">Дополнительные услуги на любой вкус</h5>
+                  <p class="motivation__text">Фотограф, фуршет, азотное шоу, видооператор, украшение зала шарами</p>
+                </div>
+              </li>
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation5.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">Клиентоориентированность во всем</h5>
+                  <p class="motivation__text">Быстрая обработка заявок
+                    <br>Индивидуальный подход
+                    <br>Персональный менеджер, доступные цены и качественное обслуживание
+                  </p>
+                </div>
+              </li>
+              <li class="motivation__item">
+                <div class="motivation__icon">
+                  <img src="/img/index/motivation6.png" alt="">
+                </div>
+                <div class="motivation__description">
+                  <h5 class="motivation__name">3 кулинарные студии рядом с метро</h5>
+                  <p class="motivation__text">Студии в стильном дизайнерском оформлении с игровыми зонами для детей и взрослых</p>
+                </div>
+              </li>
+            </ul>
+            <div class="motivation__content">
+              <h4>Добро пожаловать в&nbsp;Cookforia&nbsp;&mdash; место, где кулинария превращается в&nbsp;искусство!</h4>
+              <p class="motivation__text">Наша кулинарная студия предлагает уникальную возможность научиться готовить под руководством опытных шеф-поваров и&nbsp;насладиться процессом создания блюд. Мы&nbsp;проводим кулинарные мастер-классы для всех, кто хочет совершенствовать свои навыки&nbsp;&mdash; от&nbsp;новичковдо&nbsp;гурманов. В&nbsp;уютной атмосфере студии каждый сможет раскрыть свой кулинарный потенциал и&nbsp;создать настоящие гастрономические шедевры. В&nbsp;Cookforia можно организовать мастер-классы, отметить праздник, провести корпоративное мероприятие или просто приятно провести время за&nbsp;приготовлением блюд.
+                <br>Присоединяйтесь к нам, откройте новые гастрономические горизонты, почувствуйте себя шеф-поваром и получите незабываемые эмоции!
+              </p>
             </div>
-            <div class="contacts__map" id="map"></div>
           </div>
         </div>
       </section>
     </main>
     <foooter class="footer">
-      <div class="footer__img" style="background-image:url(img/footer.webp)"></div>
-      <div class="footer__shadow" style="background: #00000099;"></div>
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__logo">
-            <img src="img/logo-text.png" alt="Санкт-Петербургский государственный университет">
-          </div>
-          <div class="footer__contacts">
-            <h2 class="footer__title">Контакты</h2>
-            <div class="footer__item">
-              <span class="footer__label">Телефон:</span>
-              <a class="footer__link" href="tel:+79120005623">+7-912-000-56-23</a>
-            </div>
-            <div class="footer__item">
-              <span class="footer__label">Email:</span>
-              <a class="footer__link" href="mailto:aner-ant@ya.ru">aner-ant@ya.ru</a>
-            </div>
-            <div class="footer__item">
-              <span class="footer__label">Адрес:</span>
-              <a class="footer__link" href="https://yandex.ru/maps/-/CHRZ4Tk8">Россия, 199034, Санкт-Петербург, Университетская наб., д. 7–9</a>
-            </div>
-          </div>
-          <div class="footer__info">
-            <div class="footer__copyright">&copy;&nbsp;Управление по&nbsp;организации публичных мероприятий и&nbsp;сотрудничества с&nbsp;партнерами СПбГУ, 2024</div>
-            <a class="footer__agreement" href="#" target="_blank">Пользовательское соглашение</a>
-          </div>
-        </div>
-      </div>
+      <div class="container"> </div>
     </foooter>
-    <section class="portal">
-      <div class="container">
-        <a class="portal__logo" href="#">
-          <b>UCP</b>
-          <span>Universal Conference Portal </span>
-        </a>
-      </div>
-    </section>
-    <script src="https://api-maps.yandex.ru/2.1.45/?lang=ru_RU" type="text/javascript"></script>
-    <script>ymaps.ready(function () {
-  var myMapInf = new ymaps.Map('map', {
-    center: [59.852081, 30.238487],
-    zoom: 14,
-    controls: []
-  }, {
-    searchControlProvider: 'yandex#search'
-  }),
-    myPlacemarkInf = new ymaps.Placemark(myMapInf.getCenter(), {
-      hintContent: 'Санкт-Петербург, Ленинский проспект, 20',
-      balloonContent: 'Санкт-Петербург, Ленинский проспект, 20'
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/geo.png',
-      iconImageSize: [24, 24],
-      iconImageOffset: [-12, -24]
-    });
-  myMapInf.geoObjects.add(myPlacemarkInf);
-  myMapInf.behaviors.disable('scrollZoom');
-  if ($(window).width() <= 1170) {
-    myMapInf.behaviors.disable('drag');
-  }
-  var zoomControl = new ymaps.control.ZoomControl({
-    options: {
-      size: "large",
-      position: {
-        right: 20,
-        top: 100
-      }
-    }
-  });
-  myMapInf.controls.add(zoomControl);
-});
-      </script>
   </div>
 </body>
 

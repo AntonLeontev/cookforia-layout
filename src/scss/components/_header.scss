@@ -2,8 +2,182 @@
 @use "../commons/_var.scss" as v;
 
 .header {
-    position: fixed;
-    right: 0;
+    position: absolute;
+    top: 0;
     left: 0;
     padding-top: 56px;
+    z-index: v.$ui-index-3;
+    color: var(--white);
+    width: 100%;
+    transition: background-color 0.3s ease-out;
+    @include mixins.desktop {
+        background-color: var(--black);
+        padding: 22px 0;
+        &--nobg {
+            background-color: initial;
+        }
+    }
+    @include mixins.desktop-big {
+        padding: 14px 0;
+    }
+    &.active {
+        background-color: var(--black);
+    }
+    &__inner {
+        @include mixins.flex-center;
+        gap: 30px;
+        @include mixins.desktop {
+            gap: 0;
+            max-width: 1135px;
+            margin: 0 auto;
+        }
+        @include mixins.desktop-big {
+            max-width: initial;
+        }
+    }
+    &__logo {
+        width: 112px;
+        margin-right: auto;
+        @include mixins.desktop {
+            width: 129px;
+            margin-right: 0;
+        }
+        @include mixins.desktop-big {
+            width: 168px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__phone {
+        width: 32px;
+        height: 32px;
+        @include mixins.svg-mask("phone");
+        background-color: var(--white);
+        order: 2;
+        @include mixins.desktop {
+            @include mixins.flex-center;
+            margin-left: 54px;
+            gap: 6px;
+            width: auto;
+            background-color: initial;
+            mask: initial;
+            order: initial;
+            &::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                @include mixins.svg-mask("phone");
+                background-color: var(--yellow);
+            }
+        }
+        @include mixins.desktop-big {
+            margin-left: auto;
+        }
+        & span {
+            display: none;
+            @include mixins.desktop {
+                display: block;
+                color: var(--yellow);
+            }
+        }
+    }
+    &__burger {
+        width: 32px;
+        height: 32px;
+        @include mixins.svg-mask("burger");
+        background-color: var(--white);
+        order: 3;
+        padding: 0;
+        border: 0;
+        @include mixins.desktop {
+            @include mixins.flex-center;
+            gap: 4px;
+            width: auto;
+            background-color: initial;
+            mask: initial;
+            order: initial;
+            margin-left: 63px;
+            &::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                @include mixins.svg-mask("burger");
+                background-color: var(--white);
+            }
+        }
+        @include mixins.desktop-big {
+            margin-left: 89px;
+            gap: 8px;
+            &::before {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        & span {
+            display: none;
+            @include mixins.desktop {
+                display: block;
+                color: var(--white);
+            }
+        }
+    }
+    &__links {
+        display: none;
+        @include mixins.desktop {
+            @include mixins.flex-center;
+            margin-left: 24px;
+            gap: 20px;
+        }
+        @include mixins.desktop-big {
+            margin-left: 100px;
+            gap: 30px;
+        }
+    }
+    &__socials {
+        display: none;
+        @include mixins.desktop {
+            @include mixins.flex-center;
+            margin-left: 40px;
+            gap: 6px;
+        }
+        @include mixins.desktop-big {
+            margin-left: 60px;
+        }
+    }
+    &__social {
+        @include mixins.desktop {
+            width: 24px;
+            height: 24px;
+            background-color: var(--yellow);
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            &--tg {
+                mask-image: url(../img/icons/tg.svg);
+            }
+            &--instagram {
+                mask-image: url(../img/icons/instagram.svg);
+            }
+            &--vk {
+                mask-image: url(../img/icons/vk.svg);
+            }
+        }
+    }
+    &__callback {
+        display: none;
+        @include mixins.desktop {
+            display: block;
+            margin-left: 30px;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+        @include mixins.desktop-big {
+            margin-left: 60px;
+        }
+    }
 }

@@ -1,0 +1,192 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+.nav {
+    position: fixed;
+    right: calc(100vw + 5px);
+    top: 104px;
+    transition: right 0.3s ease-out;
+    z-index: v.$ui-index-5;
+    background-color: var(--black);
+    width: 100%;
+    height: calc(100dvh - 104px);
+    height: calc(100vh - 104px);
+    color: var(--white);
+    @include mixins.desktop {
+        right: auto;
+        left: -700px;
+        width: 600px;
+        max-width: 600px;
+        height: calc(100dvh - 100px);
+        height: calc(100vh - 100px);
+        top: 99px;
+        transition: left 0.3s ease-out;
+    }
+    &.active {
+        right: 0;
+        @include mixins.desktop {
+            right: auto;
+            left: 0;
+        }
+    }
+    &__inner {
+        padding: 27px 16px 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @include mixins.desktop {
+            padding: 60px 60px 0 103px;
+            position: relative;
+        }
+    }
+    &__home {
+        font-size: 20px;
+        color: var(--dark);
+        padding: 4px 16px;
+        border-radius: 10px;
+        background-color: var(--yellow);
+        align-self: flex-start;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__close {
+        display: none;
+        @include mixins.desktop {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 32px;
+            height: 32px;
+            @include mixins.svg-mask('close');
+            background-color: var(--white);
+        }
+    }
+    &__menu {
+        overflow-y: auto;
+        padding-bottom: 168px;
+    }
+    &__items {
+        margin-top: 30px;
+    }
+    &__item {
+        overflow: hidden;
+        &:not(:first-child) {
+            margin-top: 10px;
+            @include mixins.desktop {
+                margin-top: 16px;
+            }
+        }
+        &.active .nav__accordion-animation {
+            grid-template-rows: 1fr;
+        }
+        &.active .nav__accordion-animation .nav__accordion-content {
+            transform: translateY(0);
+            visibility: visible;
+            transition: transform var(--transitionLength)
+                    var(--transitionTiming),
+                visibility 0s linear;
+        }
+        &.active .nav__opener::after {
+            transform: rotate(90deg);
+        }
+    }
+    &__item-head {
+        @include mixins.flex-center;
+        gap: 26px;
+    }
+    &__link {
+        font-size: 18px;
+        color: var(--yellow);
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+    }
+    &__opener {
+        @include mixins.flex-center;
+        gap: 26px;
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        font-size: 18px;
+        line-height: 1.45;
+        color: var(--yellow);
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+        &::after {
+            content: "";
+            height: 26px;
+            width: 16px;
+            @include mixins.svg-mask("chevron");
+            mask-size: 16px;
+            background-color: currentColor;
+            transition: all 0.4s ease;
+            @include mixins.desktop {
+                height: 29px;
+            }
+        }
+    }
+    &__accordion-animation {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows var(--transitionLength)
+            var(--transitionTiming);
+    }
+    &__accordion-wrapper {
+        min-height: 0;
+    }
+    &__accordion-content {
+        transform: translateY(-100%);
+        visibility: hidden;
+        transition: transform var(--transitionLength) var(--transitionTiming),
+            visibility 0s var(--transitionLength) var(--transitionTiming);
+    }
+    &__accordion-item {
+        margin-top: 8px;
+        font-size: 16px;
+        @include mixins.desktop {
+            font-size: 18px;
+            margin-top: 11px;
+        }
+        &:last-child {
+            margin-bottom: 8px;
+        }
+        
+    }
+    &__footer {
+        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        padding: 60px 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% + 32px);
+            height: 100%;
+            background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 270.59%);
+            z-index: v.$ui-index-2;
+            pointer-events: none;
+        }
+    }
+    &__callback {
+        position: relative;
+        z-index: v.$ui-index-2;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--black);
+        padding: 10px 20px;
+        border-radius: 40px;
+        background-color: var(--yellow);
+    }
+}
