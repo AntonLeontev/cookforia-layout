@@ -2,6 +2,7 @@
 
 @use "vendor/_normalize";
 @use "vendor/_reset";
+@use "vendor/swiper.min";
 
 @use "commons/_global";
 
@@ -9,5 +10,7 @@
 @use "components/_footer";
 @use "components/_descriptor";
 @use "components/_nav";
+@use "components/_cards";
 
 @use "modules/_motivation";
+@use "modules/_additions";

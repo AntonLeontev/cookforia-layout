@@ -2,14 +2,6 @@
 @use "../commons/_var.scss" as v;
 
 .motivation {
-    &__title {
-        font-weight: 600;
-        font-size: 20px;
-        text-align: center;
-        @include mixins.desktop {
-            font-size: 40px;
-        }
-    }
     &__items {
         @include mixins.desktop {
             margin-top: 74px;
@@ -21,14 +13,31 @@
         display: flex;
         gap: 22px;
         padding: 30px 0 20px;
-        border-bottom: 2px solid var(--yellow);
+        border-bottom: 1px solid var(--yellow);
         @include mixins.desktop {
             gap: 50px;
             padding: 30px;
-            width: calc(33.3333%);
+            width: 50%;
+            border-bottom: 0;
+            &:nth-child(odd) {
+                border-right: 2px solid var(--yellow);
+            }
+            &:nth-child(n + 3) {
+                border-top: 2px solid var(--yellow);
+            }
+        }
+        @include mixins.desktop-big {
+            border-bottom: 2px solid var(--yellow);
             &:nth-child(n + 4) {
                 border-bottom: 0;
             }
+            &:nth-child(odd) {
+                border-right: 0;
+            }
+            &:nth-child(n + 3) {
+                border-top: 0;
+            }
+            width: calc(33.3333%);
             &:nth-child(2), &:nth-child(5) {
                 border-right: 2px solid var(--yellow);
                 border-left: 2px solid var(--yellow);

@@ -1,0 +1,40 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.additions {
+    &__list {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 24px;
+        @include mixins.tablet {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+    }
+    &__img {
+        margin: 0 auto;
+        width: 35px;
+        @include mixins.desktop {
+            width: 65px;
+        }
+    }
+    &__name {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+        @include mixins.desktop {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    }
+    &__text {
+        margin-top: 40px;
+        @include mixins.desktop {
+            font-size: 24px;
+            margin-top: 80px;
+        }
+    }
+}
