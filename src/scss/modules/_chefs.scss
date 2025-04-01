@@ -1,0 +1,52 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.chefs {
+    &__slider {
+        padding: 0 16px 20px;
+        position: relative;
+        left: -16px;
+        width: calc(100% + 32px);
+        @include mixins.tablet {
+            position: initial;
+            padding: 0;
+            width: 100%;
+        }
+    }
+    &__list {
+        margin-top: 20px;
+        @include mixins.tablet {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__img {
+        border-radius: 16px;
+        overflow: hidden;
+        max-width: 418px;
+        @include mixins.desktop-big {
+            max-width: 491px;
+        }
+    }
+    &__description {
+        margin-top: 10px;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__speciality {
+        font-weight: 600;
+        color: var(--gray);
+    }
+    &__text {
+        margin-top: 16px;
+        @include mixins.desktop {
+            font-size: 18px;
+        }
+    }
+}

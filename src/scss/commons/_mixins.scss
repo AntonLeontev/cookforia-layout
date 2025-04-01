@@ -1,3 +1,4 @@
+@use "./_var.scss" as v;
 
 @mixin svg-mask($img) {
   mask-image: url("../img/icons/#{$img}.svg");
@@ -79,29 +80,29 @@
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: v.$tablet) {
     @content;
   }
 }
 @mixin tablet-big {
-  @media (min-width: 1024px) {
+  @media (min-width: v.$tablet-big) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1280px) {
+  @media (min-width: v.$desktop) {
     @content;
   }
 }
 
 @mixin desktop-big {
-  @media (min-width: 1600px) {
+  @media (min-width: v.$desktop-big) {
     @content;
   }
 }
 
-@mixin desktop-fullhd {
+@mixin full-hd {
   @media (min-width: 1920px) {
     @content;
   }

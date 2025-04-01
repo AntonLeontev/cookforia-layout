@@ -16,27 +16,6 @@
         @include mixins.desktop-big {
             margin-top: 80px;
         }
-        & .swiper-pagination {
-            height: 10px;
-            top: calc(100% - 10px);
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            @include mixins.tablet {
-                display: none;
-            }
-        }
-        &.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0;
-            width: 10px;
-            height: 10px;
-            background-color: transparent;
-            border: 1px solid var(--gray);
-        } 
-        &.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
-            margin: 0;
-            background-color: var(--gray);
-        }
     }
     &__list {
         @include mixins.tablet {

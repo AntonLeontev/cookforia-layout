@@ -1,0 +1,132 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.studios {
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include mixins.tablet {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__item {
+        text-align: center;
+        @media (min-width: 525px) {
+            text-align: initial;
+        }
+        @include mixins.tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__media {
+        border-radius: 16px;
+        overflow: hidden;
+        max-width: 491px;
+    }
+    &__address {
+        margin-top: 10px;
+        font-weight: 600;
+        display: flex;
+        gap: 10px;
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            @include mixins.svg-mask('geo');
+            background-color: var(--yellow);
+        }
+        @include mixins.tablet {
+            font-size: 18px;
+            margin-top: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    &__link {
+        margin: 20px auto 0;
+        @include mixins.tablet {
+            margin-top: auto;
+        }
+    }
+    &__contacts {
+        margin-top: 40px;
+        @include mixins.tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 48px;
+        }
+        @include mixins.desktop {
+            gap: 172px;
+            margin-top: 80px;
+        }
+
+    }
+    &__map {
+        border-radius: 16px;
+        overflow: hidden;
+        @include mixins.tablet {
+            flex: 1 0 auto;
+        }
+    }
+    &__links {
+        margin-top: 10px;
+        @include mixins.tablet {
+            flex: 0 0 332px;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        @include mixins.tablet {
+            font-size: 24px;
+        }
+    }
+    &__link {
+        margin-top: 4px;
+        display: block;
+        &:first-of-type {
+            margin-top: 10px;
+            @include mixins.tablet {
+                margin-top: 16px;
+            }
+        }
+    }
+    &__subtitle {
+        margin-top: 24px;
+        font-weight: 600;
+        @include mixins.tablet {
+            font-size: 18px;
+        }
+    }
+    &__addresses {
+        margin-top: 3px;
+        @include mixins.tablet {
+            margin-top: 16px;
+        }
+        & li {
+            display: flex;
+            gap: 8px;
+            @include mixins.tablet {
+                font-size: 18px;
+            }
+            &::before {
+                content: '';
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: currentColor;
+                align-self: center;
+            }
+        }
+    }
+    &__socials {
+        margin-top: 20px;
+        @include mixins.tablet {
+            margin-top: 38px;
+        }
+    }
+}

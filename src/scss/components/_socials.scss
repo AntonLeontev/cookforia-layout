@@ -1,0 +1,28 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.socials {
+    @include mixins.flex-center;
+    gap: 10px;
+}
+.social {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mixins.tablet {
+        width: 24px;
+        height: 24px;
+    }
+    &--tg {
+        background-image: url(../img/icons/tg-fill.svg);
+    }
+    &--instagram {
+        background-image: url(../img/icons/instagram-fill.svg);
+    }
+    &--vk {
+        background-image: url(../img/icons/vk-fill.png);
+    }
+}

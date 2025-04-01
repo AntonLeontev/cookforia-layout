@@ -1,0 +1,92 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.certificate {
+    background-color: var(--black);
+    padding: 56px 0;
+    color: var(--white);
+    @include mixins.desktop-big {
+        position: relative;
+        background-image: url(../img/certificate/bg-right.webp);
+        background-image: url(../img/certificate/bg-right.png);
+        background-position: 1363px center;
+        background-repeat: no-repeat;
+        background-size: 557px 500px;
+        padding: 0;
+    }
+    @include mixins.full-hd {
+        background-position: right center
+    }
+    &__inner {
+        @include mixins.tablet {
+            @include mixins.flex-center;
+            gap: 24px;
+        }
+        @include mixins.desktop-big {
+            padding: 60px 0;
+            min-height: 500px;
+        }
+    }
+    &__img {
+        display: block;
+        max-width: 343px;
+        margin: 0 auto;
+        @include mixins.tablet {
+            margin: 0;
+        }
+        @include mixins.desktop {
+            max-width: 438px;
+        }
+        @include mixins.desktop-big {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 60px;
+        }
+    }
+    &__description {
+        text-align: center;
+        @include mixins.tablet {
+            max-width: 748px;
+            text-align: left;
+        }
+        @include mixins.desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        }
+        @include mixins.desktop-big {
+            margin-left: calc(1580px - 748px - 378px );
+        }
+        @include mixins.full-hd {
+            margin-left: calc(1580px - 748px - 438px );
+        }
+    }
+    &__title {
+        margin-top: 40px;
+        font-size: 600px;
+        font-size: 24px;
+        @include mixins.tablet {
+            margin-top: 0;
+        }
+        @include mixins.desktop {
+            font-size: 40px;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 0;
+            font-size: 24px;
+        }
+    }
+    &__link {
+        margin-top: 20px;
+        font-size: 20px;
+        @include mixins.desktop {
+            margin-top: 0;
+            align-self: flex-start;
+        }
+    }
+}
