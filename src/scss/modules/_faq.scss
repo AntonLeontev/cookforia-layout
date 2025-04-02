@@ -1,0 +1,85 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.faq {
+    max-width: 1006px;
+    margin: 0 auto;
+    &__list {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+    }
+    &__item {
+        overflow: hidden;
+        &:not(:first-child) {
+            margin-top: 16px;
+            @include mixins.desktop {
+                margin-top: 24px;
+            }
+        }
+        &.active .faq__accordion-animation {
+            grid-template-rows: 1fr;
+        }
+        &.active .faq__accordion-animation .faq__accordion-content {
+            transform: translateY(0);
+            visibility: visible;
+            transition: transform var(--transitionLength)
+                    var(--transitionTiming),
+                visibility 0s linear;
+        }
+        &.active .faq__question::after {
+            transform: rotate(45deg);
+        }
+    }
+    &__question {
+        font-weight: 600;
+        @include mixins.flex-center-space;
+        gap: 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #D9D9D9;
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+        &::after {
+            content: '';
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            @include mixins.svg-mask('plus');
+            background-color: currentColor;
+            transition: transform .2s linear;
+            @include mixins.desktop {
+                flex: 0 0 32px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    &__accordion-animation {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows var(--transitionLength)
+            var(--transitionTiming);
+    }
+    &__accordion-wrapper {
+        min-height: 0;
+    }
+    &__accordion-content {
+        transform: translateY(-100%);
+        visibility: hidden;
+        transition: transform var(--transitionLength) var(--transitionTiming),
+            visibility 0s var(--transitionLength) var(--transitionTiming);
+    }
+    &__answer {
+        padding-top: 5px;
+        font-size: 14px;
+        padding-bottom: 4px;
+        @include mixins.desktop {
+            padding-top: 10px;
+            font-size: 16px;
+            padding-bottom: 0;
+        }
+    }
+}

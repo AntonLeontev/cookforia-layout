@@ -1,0 +1,41 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.partners {
+    &__list {
+        margin-top: 20px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        @include mixins.flex-center;
+        gap: 16px;
+        padding: 0 16px 20px;
+        position: relative;
+        left: -16px;
+        width: calc(100% + 32px);
+        @include mixins.gray-scrollbar-horizontal;
+        @include mixins.tablet {
+            gap: 60px;
+            width: calc(100% + 48px);
+            left: -24px;
+            padding: 0 24px 20px;
+        }
+        @include mixins.desktop {
+            position: initial;
+            padding: 0;
+            width: 100%;
+            overflow: initial;
+            padding: 0 50px;
+        }
+    }
+    &__item {
+        scroll-snap-align: start;
+        flex: 0 0 164px;
+        @include mixins.tablet {
+            flex: 0 0 233px;
+        }
+        @include mixins.desktop {
+            flex: initial;
+        }
+    }
+}

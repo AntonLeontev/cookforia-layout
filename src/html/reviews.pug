@@ -1,3 +1,23 @@
 section.section.section--bg.reviews 
     .container 
         h3.section-title Отзывы о студии Cookforia 
+        .reviews__inner
+            .reviews__total Все отзывы <span>5.0</span>
+            a(href="#").reviews__yandex Карты 5.0 
+            a(href="#").reviews__google 5.0 
+            a(href="#").reviews__link.link-btn Оставить отзыв 
+            .reviews__count 
+                p 5.0 из 5
+                img(src="img/reviews/stars.svg" alt="") 
+                span На основе 242 оценок
+        .reviews__slider.swiper.js-sliderReviews
+            ul.reviews__list.swiper-wrapper
+                li.reviews__item.swiper-slide
+                    .reviews__address Студия на ул. Московский проспект 183-185
+                    .reviews__media 
+                        img(src="img/reviews/media1.png" alt="") 
+                li.reviews__item.swiper-slide
+                    .reviews__address Студия на ул. Дыбенко, 8к1
+                    .reviews__media 
+                        img(src="img/reviews/media2.png" alt="") 
+            .swiper-pagination-reviews.swiper-pagination

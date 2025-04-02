@@ -1,0 +1,150 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.reviews {
+    &__inner {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;        
+        @include mixins.tablet {
+            border-radius: 16px;
+            padding: 30px;
+            background-color: var(--white);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+        }
+    }
+    &__total {
+        padding: 6px 12px;
+        border-radius: 3px;
+        background-color: var(--white);
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        color: var(--yellow);
+        @include mixins.tablet {
+            font-size: 24px;
+            padding: 0;
+        }
+    }
+    &__yandex {
+        padding: 6px 12px;
+        border-radius: 3px;
+        background-color: var(--white);
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        gap: 2px;
+        @include mixins.tablet {
+            padding: 0;
+            font-size: 24px;
+            gap: 3px;
+        }
+        &::before, &::after {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-image: url('../img/reviews/yandex-geo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            order: 1;
+            @include mixins.tablet {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &::after {
+            background-image: url('../img/reviews/yandex.png');
+            order: 2;
+        }
+    }
+    &__google {
+        padding: 6px 12px;
+        border-radius: 3px;
+        background-color: var(--white);
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        @include mixins.flex-center-center;
+        gap: 5px;
+        @include mixins.tablet {
+            font-size: 24px;
+            padding: 0;
+        }
+        &::before {
+            content: '';
+            width: 104px;
+            height: 24px;
+            background-image: url('../img/reviews/google.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include mixins.tablet {
+                width: 125px;
+                height: 24px;
+            }
+        }
+    }
+    &__link {
+        padding-block: 6px;
+        @include mixins.tablet {
+            order: 5;
+            margin-left: auto;
+            align-self: center;
+            padding: 4px 10px;
+        }
+    }
+    &__count {
+        grid-column: 1/3;
+        margin-top: 24px;
+        @include mixins.flex-center;
+        gap: 10px;
+        @include mixins.tablet {
+           font-size: 24px;
+           margin-top: 0;
+           width: calc(100% - 200px);
+        }
+        & span {
+            font-size: 14px;
+            color: #1E1E1E99;
+        }
+    }
+    &__slider {
+        padding: 0 16px 20px;
+        position: relative;
+        left: -16px;
+        width: calc(100% + 32px);
+        @include mixins.tablet {
+            position: initial;
+            padding: 0;
+            width: 100%;
+        }
+    }
+    &__list {
+        margin-top: 20px;
+        @include mixins.tablet {
+            display: grid;
+            gap: 36px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mixins.desktop {
+            margin-top: 60px;
+        }
+    }
+    &__address {
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+    }
+    &__media {
+        margin-top: 20px;
+    }
+}
