@@ -6,12 +6,14 @@
 
 @use "commons/_global";
 
-@use "components/_header";
-@use "components/_footer";
 @use "components/_descriptor";
 @use "components/_nav";
 @use "components/_cards";
 @use "components/_socials";
+@use "components/_scroll-btn";
+@use "components/_calendar";
+@use "components/_header";
+@use "components/_footer";
 
 
 @use "modules/_motivation";

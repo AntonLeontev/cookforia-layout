@@ -3,7 +3,279 @@
 .footer {
     background-color: var(--dark);
     padding-top: 56px;
+    color: var(--white);
     @include mixins.desktop {
         padding-top: 80px;
+    }
+    &__form {
+        text-align: center;
+        padding-bottom: 56px;
+        @include mixins.desktop {
+            padding-bottom: 80px;
+        }
+    }
+    &__form-title {
+        font-size: 24px;
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 40px;
+        }
+    }
+    &__form-text {
+        max-width: 286px;
+        margin: 24px auto 0;
+        @include mixins.desktop {
+            max-width: initial;
+            margin: 9px auto 0;
+            font-size: 24px;
+        }
+    }
+    &__form-inputs {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        @include mixins.desktop {
+            margin-top: 80px;
+            gap: 24px;
+        }
+    }
+    &__form-input {
+        width: 100%;
+        max-width: 491px;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid var(--gray);
+        padding-bottom: 10px;
+        color: var(--white);
+        font-size: 16px;
+        line-height: 1.4;
+        @include mixins.desktop {
+            font-size: 18px;
+        }
+        &::placeholder {
+            color: var(--gray);
+        }
+    }
+    &__form-btn {
+        display: inline-block;
+        background-color: var(--yellow);
+        color: var(--black);
+        border-radius: 40px;
+        padding: 10px 30px;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 30px;
+        border: 0;
+        @include mixins.desktop {
+            margin-top: 60px;
+        }
+    }
+    &__form-policy {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+        color: var(--gray);
+        font-size: 14px;
+        @include mixins.tablet {
+            text-align: center;
+            margin-top: 16px;
+        }
+        & a {
+            text-decoration: underline;
+        }
+    }
+    &__form-socials {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include mixins.tablet {
+            flex-direction: row;
+            justify-content: center;
+            gap: 24px;
+        }
+        @include mixins.desktop {
+            margin-top: 40px;
+        } 
+    }
+    &__form-social {
+        @include mixins.flex-center;
+        gap: 10px;
+        padding: 10px;
+        background-color: var(--green);
+        @include mixins.tablet {
+            min-width: 233px;
+        }
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            @include mixins.svg-bg('whatsapp');
+        }
+        &--tg {
+            background-color: var(--blue);
+            &::before {
+                @include mixins.svg-bg('tg-fill');
+            }
+        }
+    }
+    &__inner {
+        text-align: center;
+        padding-top: 56px;
+        @include mixins.desktop {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: repeat(3,auto);
+            text-align: left;
+            padding: 60px 0 0;
+        }
+    }
+    &__logo {
+        width: 149px;
+        margin: 0 auto;
+        @include mixins.desktop {
+            grid-column: 1;
+            width: 179px;
+            margin-left: 6px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__copyrights {
+        margin-top: 20px;
+        color: var(--gray);
+        @include mixins.desktop {
+            display: none;
+        }
+        &--desktop {
+            @include mixins.desktop {
+                display: flex;
+                justify-content: flex-end;
+                gap: 90px;
+                margin-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
+        & span {
+            display: block;
+            &:not(:first-child) {
+                margin-top: 4px;
+                @include mixins.desktop {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    &__docs {
+        margin-top: 20px;
+        @include mixins.desktop {
+            grid-column: 1;
+        }
+        & a {
+            color: var(--yellow);
+            display: block;
+            &:not(:first-child) {
+                margin-top: 4px;
+                @include mixins.desktop {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    &__links {
+        margin: 40px auto 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 6px 40px;
+        padding: 0 34px;
+        text-align: left;
+        max-width: 393px;
+        @include mixins.desktop {
+            display: flex;
+            gap: 80px;
+            max-width: initial;
+            padding: 0;
+            margin-top: 0;
+            grid-row: 1/3;
+            grid-column: 2;
+            margin-left: 40px;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        &:last-child {
+            margin-top: 6px;
+            width: calc(100% + 14px);
+            grid-column: 1/3;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include mixins.desktop {
+            gap: 10px;
+            &:last-child {
+                margin-top: 0;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 10px;
+                width: auto;
+            }
+        }
+    }
+    &__link {
+        font-size: 14px;
+        @include mixins.desktop {
+            font-size: 16px;
+        }
+    }
+    &__subscribe {
+        margin-top: 40px;
+        color: var(--yellow);
+        @include mixins.desktop {
+            margin-top: 0;
+            grid-row: 1;
+            grid-column: 3;
+            margin-left: 40px;
+        }
+    }
+    &__socials {
+        margin-top: 20px;
+        gap: 30px;
+        justify-content: center;
+        @include mixins.desktop {
+            justify-content: start;
+        }
+    }
+    &__social {
+        width: 32px;
+        height: 32px;
+    }
+    &__contacts {
+        display: flex;
+        margin-top: 107px;
+        @include mixins.desktop {
+            margin-top: 0;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    &__contact {
+        width: 50%;
+        border: 1px solid var(--yellow);
+        background-color: var(--yellow);
+        color: var(--dark);
+        padding: 10px;
+        text-align: center;
+        &:last-child {
+            color: var(--yellow);
+            background-color: transparent;
+        }
     }
 }

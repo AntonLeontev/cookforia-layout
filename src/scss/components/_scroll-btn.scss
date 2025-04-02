@@ -1,0 +1,44 @@
+@use "../commons/var" as v;
+@use "../commons/_mixins.scss" as mixins;
+
+.scroll-btn {
+    position: fixed;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 40px;
+    font-size: 16px;
+    color: var(--yellow);
+    @include mixins.flex-center;
+    gap: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    @include mixins.desktop {
+        right: 40px;
+        transform: initial;
+    }
+    @include mixins.desktop-big {
+        right: 108px;
+    }
+    &::after {
+        content: "";
+        width: 20px;
+        height: 27px;
+        mask: url(../img/icons/arrow-up.svg) center no-repeat;
+        background-color: currentColor;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        z-index: v.$ui-index-3;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
