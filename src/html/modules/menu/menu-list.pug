@@ -1,0 +1,73 @@
+section.section.menu-list
+    .container
+        h3.section-title В нашей студии более ??? видов меню
+        .menu-list__filters 
+            button(type="button").menu-list__filter.active Основное меню
+            button(type="button").menu-list__filter Детское меню
+            button(type="button").menu-list__filter Фуршет
+            button(type="button").menu-list__filter Дополнительно
+            button(type="button").menu-list__filter Конструктор меню
+        .cards__slider.swiper.js-sliderMenu
+            ul.cards__list.swiper-wrapper
+                - for (let i = 1; i < 6; i++)
+                    li.card.swiper-slide
+                        .card__gallery.swiper.js-sliderCard
+                            .card__gallery-list.swiper-wrapper
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card1.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card1-2.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card1-3.png" alt="")
+                            .swiper-pagination-card.swiper-pagination
+                        .card__body
+                            .card__title Меню #6
+                            .card__text
+                                ul 
+                                    li Тёплый салат с жареным Адыгейским сыром, виноградом и печёным перцем 
+                                    li Стейк Мачете с картофелем Дофинуаи соусом Чимимурри
+                                    li Тирамису с кремом на сыре Маскарпоне
+                            .card__box
+                                .card__price 5100 ₽
+                                button(type="button").card__btn Выбрать
+                    li.card.swiper-slide
+                        .card__gallery.swiper.js-sliderCard
+                            .card__gallery-list.swiper-wrapper
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card2.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card2-2.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card2-3.png" alt="")
+                            .swiper-pagination-card.swiper-pagination
+                        .card__body
+                            .card__title Меню #7
+                            .card__text
+                                ul 
+                                    li Тёплый чилийский салат с соусом Путонегро
+                                    li Запечённый палтус на цитрусовой подушке, с бейби картофелем и соусом Холландез
+                                    li Штрудель с лимонным курдом и грушевым мороженым
+                            .card__box
+                                .card__price 4200 ₽
+                                button(type="button").card__btn Выбрать
+                    li.card.swiper-slide
+                        .card__gallery.swiper.js-sliderCard
+                            .card__gallery-list.swiper-wrapper
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card3.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card3-2.png" alt="")
+                                .card__gallery-img.swiper-slide
+                                    img(src="img/menu/card3-3.png" alt="")
+                            .swiper-pagination-card.swiper-pagination
+                        .card__body
+                            .card__title Меню #12
+                            .card__text
+                                ul 
+                                    li Салат с баклажаном и сыром фета
+                                    li Корейка на кости с печёным картофелем и брусничным соусом
+                                    li Шоколадные пряники в сахарной пудре
+                            .card__box
+                                .card__price 3600 ₽
+                                button(type="button").card__btn Выбрать
+            .swiper-pagination-menu.swiper-pagination

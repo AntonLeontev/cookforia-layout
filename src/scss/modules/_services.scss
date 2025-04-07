@@ -1,0 +1,59 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.services {
+    text-align: center;
+    &__slider {
+        margin-top: 20px;
+        padding: 0 16px 20px;
+        position: relative;
+        left: -16px;
+        width: calc(100% + 32px);
+        @include mixins.tablet {
+            position: relative;
+            left: 0;
+            padding: 0;
+            width: 100%;
+        }
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+        & .swiper-pagination-services {
+            display: flex;
+            @include mixins.tablet-big {
+                display: none;
+            }
+        }
+    }
+    &__list {
+        @include mixins.tablet-big {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+    &__item {
+        padding: 30px;
+        @include mixins.tablet-big {
+            width: auto;
+            &:not(:nth-child(5n)) {
+                border-right: 2px solid var(--yellow);
+            }
+            &:nth-child(n + 6) {
+                border-top: 2px solid var(--yellow);
+            }
+        }
+    }
+    &__img {
+        width: 66px;
+        height: 66px;
+        margin: 0 auto;
+    }
+    &__name {
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    &__price {
+        margin-top: 12px;
+    }
+}

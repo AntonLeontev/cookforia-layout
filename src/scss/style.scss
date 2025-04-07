@@ -14,6 +14,7 @@
 @use "components/_calendar";
 @use "components/_header";
 @use "components/_footer";
+@use "components/_breadcrumbs";
 
 
 @use "modules/_motivation";
@@ -24,3 +25,10 @@
 @use "modules/_reviews";
 @use "modules/_partners";
 @use "modules/_faq";
+@use "modules/_menu-list";
+@use "modules/_events";
+@use "modules/_stages";
+@use "modules/_price";
+@use "modules/_gallery";
+@use "modules/_services";
+@use "modules/_certificates";

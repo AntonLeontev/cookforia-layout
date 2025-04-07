@@ -1,0 +1,27 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Мероприятия'
+    - var page = 'events'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Мероприятия'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/events/descriptor
+                include html/modules/events/events-cards
+                include html/modules/stages
+                include html/modules/events/price
+                include html/modules/gallery
+                include html/modules/events/services
+                include html/modules/reviews
+                include html/modules/faq
+            include html/modules/footer

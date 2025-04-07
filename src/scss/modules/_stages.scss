@@ -1,0 +1,96 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.stages {
+    &__list {
+        max-width: 200px;
+        margin: 44px auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        @include mixins.tablet {
+            flex-direction: row;
+            max-width: 100%;
+        }
+        @include mixins.desktop {
+            margin-top: 90px;
+        }
+        @include mixins.desktop-big {
+            gap: 130px;
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 57px;
+            right: 14px;
+            top: -24px;
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            @include mixins.desktop {
+                width: 110px;
+                height: 130px;
+                right: 0;
+                top: -10px;
+                background-size: contain;
+            }
+        }
+        &:first-child {
+            @include mixins.desktop {
+                padding-right: 110px;
+            }
+            &::before {
+                background-image: url(../img/icons/one.svg);
+            }
+        }
+        &:nth-child(2) {
+            @include mixins.desktop {
+                padding-right: 160px;
+            }
+            &::before {
+                background-image: url(../img/icons/two.svg);
+            }
+        }
+        &:nth-child(3) {
+            @include mixins.desktop {
+                padding-right: 100px;
+            }
+            &::before {
+                background-image: url(../img/icons/three.svg);
+            }
+        }
+    }
+    &__title {
+        font-weight: 600;
+        padding-left: 10px;
+        @include mixins.desktop {
+            font-size: 24px;
+            padding-left: 0;
+        }
+    }
+    &__text {
+        margin-top: 10px;
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+    }
+    &__text li {
+        padding-left: 24px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 3px;
+            top: 9px;
+            left: 11px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+    }
+}

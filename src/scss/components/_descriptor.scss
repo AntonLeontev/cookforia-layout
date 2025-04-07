@@ -7,8 +7,15 @@
     padding: 228px 0 115px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     @include mixins.desktop {
         padding: 348px 0;
+        &--noshadow {
+            background-color: var(--black);
+            &::before {
+                display: none;
+            }
+        }
     }
     &::before {
         content: '';

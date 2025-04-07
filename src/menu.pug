@@ -1,0 +1,25 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Меню'
+    - var page = 'menu'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Меню'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/menu/descriptor
+                include html/modules/menu/menu-list
+                include html/modules/menu/cards
+                include html/modules/studios
+                include html/modules/reviews
+                include html/modules/partners
+            include html/modules/footer

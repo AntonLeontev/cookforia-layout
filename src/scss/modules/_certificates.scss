@@ -1,0 +1,178 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.certificates {
+    & .descriptor {
+        @include mixins.desktop {
+            padding: 192px 0;
+            background-size: auto 100%;
+            background-position: right center;
+        }
+    }
+    &-description {
+        &__inner {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            @include mixins.tablet {
+                flex-direction: row;
+                align-items: center;
+            }
+            @include mixins.desktop {
+                margin-top: 80px;
+                gap: 153px;
+            }
+        }
+        &__text {
+            @include mixins.desktop {
+                font-size: 24px;
+            }
+            & p:not(:first-child) {
+                margin-top: 16px;
+            }
+        }
+        &__img {
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 490px;
+            margin: 0 auto;
+            @include mixins.tablet {
+                flex: 0 0 490px;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-about {
+        &__list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+            @include mixins.tablet-big {
+                flex-direction: row;
+                justify-content: center;
+                gap: 80px;
+            }
+            @include mixins.desktop {
+                margin-top: 80px;
+            }
+        }
+        &__item {
+            @include mixins.desktop {
+                max-width: 270px;
+            }
+        }
+        &__icon {
+            max-width: 66px;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-top: 16px;
+        }
+        &__text {
+            margin-top: 10px;
+        }
+    }
+    &-buy {
+        &__form {
+            margin-top: 20px;
+            text-align: center;
+            @include mixins.desktop {
+                margin-top: 50px;
+            }
+        }
+        &__box {
+            @include mixins.tablet {
+                display: flex;
+                gap: 24px;
+                align-items: stretch;
+                justify-content: center;
+            }
+        }
+        &__fields {
+            @include mixins.flex-column;
+            gap: 30px;           
+            @include mixins.tablet {
+                flex: 0 0 362px;
+            } 
+        }
+        &__input {
+            width: 100%;
+            max-width: 362px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 10px;
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.4;
+            &::placeholder {
+                color: rgba(30, 30, 30, 0.4);
+            }
+        }
+        &__text {
+            border-radius: 16px;
+            margin: 20px auto 0;
+            max-width: 362px;
+            background-color: var(--yellow);
+            padding: 26px 26px 34px;
+            text-align: left;  
+            @include mixins.tablet {
+                margin: 0;
+                flex: 0 0 362px;
+            } 
+            & p:not(:first-child) {
+                margin-top: 16px;
+            }
+        }
+        &__btn {
+            margin-top: 40px;
+            @include mixins.desktop {
+                margin-top: 50px;
+            }
+        }
+    }
+    &-how {
+        text-align: center;
+        &__inner {
+            margin-top: 20px;
+            @include mixins.desktop {
+                margin-top: 80px;
+            }
+        }
+        &__icon {
+            max-width: 65px;
+            margin: 0 auto;
+            @include mixins.desktop {
+                max-width: 75px;
+            }
+        }
+        &__title {
+            font-weight: 600;
+            margin-top: 20px;
+            @include mixins.desktop {
+                margin-top: 24px;
+                font-size: 18px;
+            }
+        }
+        &__text {
+            margin-top: 10px;
+            @include mixins.desktop {
+                margin-top: 24px;
+                font-size: 18px;
+            }
+        }
+        &__btn {
+            margin-top: 20px;
+            @include mixins.desktop {
+                margin-top: 60px;
+            }
+        }
+    }
+}

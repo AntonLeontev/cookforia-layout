@@ -1,0 +1,44 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.breadcrumbs {
+    display: none;
+    @include mixins.desktop {
+        display: block;
+        margin-top: 99px;
+        background-color: var(--black);
+    }
+    &-list {
+        @include mixins.desktop {
+            max-width: 1135px;
+            margin: 0 auto;
+            @include mixins.flex-center;
+            gap: 24px;
+            padding: 13px 0; 
+            color: var(--yellow);
+            font-weight: 600;
+        }
+        @include mixins.desktop-big {
+            max-width: initial;
+        }
+    }
+}
+.breadcrumb {
+    &:not(:first-child) {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 6px);
+            left: -16px;
+            width: 12px;
+            height: 12px;
+            @include mixins.svg-mask('chevron');
+            background-color: var(--white);
+        }
+    }
+    & a {
+        color: var(--white);
+        font-weight: 400;
+    }
+}

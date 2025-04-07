@@ -116,22 +116,24 @@
         height: 0;
     }
 }
-@mixin gray-scrollbar {
-    scrollbar-color: var(--gray);
+@mixin scrollbar-yellow {
     -ms-overflow-style: none;
+    scrollbar-color:  var(--yellow) transparent;
     &::-webkit-scrollbar {
-        width: 2px;
+        width: 8px;
+        height: 8px;
         scrollbar-width: initial;
     }
     &::-webkit-scrollbar-track {
-        background: none;
+        background: transparent;
+        border-radius: 6px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: var(--gray);
-        border-radius: 0;
+        background-color: var(--yellow);
+        border-radius: 6px;
     }
 }
-@mixin gray-scrollbar-horizontal {
+@mixin scrollbar-gray {
     scrollbar-color: var(--gray);
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
@@ -143,6 +145,7 @@
     }
     &::-webkit-scrollbar-track {
         background: none;
+        border-radius: 0;
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--gray);

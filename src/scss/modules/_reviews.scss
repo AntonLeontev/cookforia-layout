@@ -15,6 +15,9 @@
             flex-wrap: wrap;
             gap: 20px 40px;
         }
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
     }
     &__total {
         padding: 6px 12px;

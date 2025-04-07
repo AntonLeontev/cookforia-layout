@@ -1,0 +1,61 @@
+nav.nav.js-nav
+    .nav__inner
+        button(type="button" aria-label="Закрыть").nav__close.js-navClose
+        .nav__menu
+            a(href="/").nav__home Главная 
+            ul.nav__items
+                li.nav__item.js-navItem
+                    .nav__item-head
+                        a(href="events.html").nav__link Мероприятия
+                        button(type="button" aria-label="Список мероприятий").nav__opener.js-navToggle
+                    .nav__accordion
+                        .nav__accordion-animation
+                            .nav__accordion-wrapper
+                                .nav__accordion-content
+                                    ul.nav__accordion-list
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Корпоратив
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Девичник
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link День рождения
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Свидание
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Тимбилдинг
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Детский праздник
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Кулинарная вечеринка
+                li.nav__item.js-navItem
+                    .nav__item-head
+                        button(type="button").nav__opener.js-navToggle Индивидуальные мастер классы
+                    .nav__accordion
+                        .nav__accordion-animation
+                            .nav__accordion-wrapper
+                                .nav__accordion-content
+                                    ul.nav__accordion-list 
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Корпоратив
+                                        li.nav__accordion-item 
+                                            a(href="#").nav__accordion-link Девичник
+                li.nav__item
+                    a(href="#").nav__link Расписание сборных мастер-классов
+                li.nav__item
+                    a(href="#").nav__link Кейтеринг
+                li.nav__item
+                    a(href="#").nav__link Аренда студии
+                li.nav__item
+                    a(href="#").nav__link Рецепты
+                li.nav__item
+                    a(href="#").nav__link Блог
+                li.nav__item
+                    a(href="menu.html").nav__link Меню
+                li.nav__item
+                    a(href="certificates.html").nav__link Сертификаты
+                li.nav__item
+                    a(href="#").nav__link Акции
+                li.nav__item
+                    a(href="#").nav__link Контакты
+        .nav__footer
+            .nav__callback Заказать мероприятие

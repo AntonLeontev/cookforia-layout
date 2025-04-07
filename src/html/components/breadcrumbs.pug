@@ -1,0 +1,11 @@
+mixin breadcrumbs(currentPage, links, сlasses = "")
+    .breadcrumbs(class=сlasses)
+        .container
+            ol.breadcrumbs-list
+                li.breadcrumb
+                    a(href="/") Главная
+                if links.length
+                    each link in links
+                        li.breadcrumb
+                            a(href=link.href)= link.text
+                li.breadcrumb= currentPage.text

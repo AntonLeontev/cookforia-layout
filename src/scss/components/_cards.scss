@@ -13,7 +13,7 @@
             padding: 0;
             width: 100%;
         }
-        @include mixins.desktop-big {
+        @include mixins.desktop {
             margin-top: 80px;
         }
     }
@@ -25,7 +25,7 @@
         }
         @include mixins.desktop-big {
             display: grid;
-            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-columns: repeat(4, 1fr);
             gap: 48px;
         }
     }
@@ -37,10 +37,10 @@
         font-weight: 600;
         font-size: 18px;
         &::after {
-            content: '';
+            content: "";
             width: 20px;
             height: 20px;
-            @include mixins.svg-mask('arrow');
+            @include mixins.svg-mask("arrow");
             background-color: currentColor;
         }
         @include mixins.tablet {
@@ -52,6 +52,7 @@
 .card {
     border-radius: 16px;
     border: 1px solid #1e1e1e4d;
+    overflow: hidden;
     @include mixins.tablet {
         display: flex;
         flex-direction: column;
@@ -128,7 +129,7 @@
         font-weight: 600;
     }
     &__body {
-        padding: 18px 40px 30px 18px;
+        padding: 18px 18px 30px 18px;
         @include mixins.tablet {
             padding: 18px 18px 30px 18px;
             flex-grow: 1;
@@ -140,7 +141,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px 40px;
-
+        padding-right: 16px;
     }
     &__block {
         & b {
@@ -153,21 +154,77 @@
         }
     }
     &__link {
-        display: inline-block;
-        padding: 10px 20px;
-        font-weight: 600;
-        color: var(--black);
-        background-color: var(--yellow);
-        border-radius: 40px;
+        margin-top: 30px;
+        text-align: center;
     }
     &__address {
-        margin-top: 28px;
+        margin-top: 16px;
         font-size: 18px;
         font-weight: 600;
         color: var(--dark);
         @include mixins.tablet {
             padding-top: 28px;
             margin-top: auto;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__text {
+        margin-top: 24px;
+        & ul li {
+            padding-left: 24px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 3px;
+                height: 3px;
+                top: 9px;
+                left: 11px;
+                border-radius: 50%;
+                background-color: currentColor;
+            }
+        }
+    }
+    &__box {
+        padding-top: 48px;
+        margin-top: auto;
+        @include mixins.flex-center-space;
+        gap: 8px;
+    }
+    &__price {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    &__btn {
+        background-color: var(--yellow);
+        border-radius: 40px;
+        font-weight: 600;
+        color: var(--black);
+        line-height: 1.4;
+        border: 0;
+        padding: 4px 20px;
+    }
+    &__gallary {
+        overflow: hidden;
+        width: 100%;
+        & .swiper-pagination {
+            display: flex;
+        }
+        &-list {
+            height: 270px;
+        }
+        &-img {
+            overflow: hidden;
+            & img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                object-position: center;
+            }
         }
     }
 }

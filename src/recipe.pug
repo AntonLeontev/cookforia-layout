@@ -1,0 +1,20 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Шоколадный торт с клубникой и карамелью'
+    - var page = 'recipe'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Шоколадный торт с клубникой и карамелью' },
+                [{ href: 'recipes.html', text: 'Рецепты' }]
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/recipe/descriptor
+            include html/modules/footer

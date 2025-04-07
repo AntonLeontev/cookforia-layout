@@ -1,0 +1,100 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.price {
+    &__inner {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        color: var(--white);
+        padding: 40px 18px;
+        text-align: center;
+        @include mixins.desktop {
+            padding: 66px 104px 89px;
+            text-align: left;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        & * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: left;
+        @include mixins.desktop {
+            font-size: 40px;
+            max-width: 814px;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+        text-align: left;
+        @include mixins.desktop {
+            margin-top: 30px;
+            font-size: 24px;
+            max-width: 588px;
+        }
+    }
+    &__link {
+        margin-top: 59px;
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+    }
+    &__list {
+        @include mixins.tablet-big {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__list-title {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__list-item {
+        @include mixins.flex-center;
+        gap: 10px;
+        @include mixins.desktop {
+            font-size: 20px;
+        }
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            @include mixins.svg-bg('check');
+        }
+    }
+    &__list-col {
+        margin-top: 16px;
+        @include mixins.tablet-big {
+            margin-top: 0;
+        }
+        &:first-of-type {
+            margin-top: 30px;
+            @include mixins.tablet-big {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.menu-list {
+    &__filters {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mixins.tablet {
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+        & + .cards__slider {
+            margin-top: 40px;
+            @include mixins.desktop {
+                margin-top: 60px;
+            }
+        }
+    }
+    &__filter {
+        background-color: var(--bg);
+        color: #00000080;
+        border-radius: 40px;
+        padding: 13px;
+        border: 0;
+        outline: 0;
+        font-weight: 600;
+        line-height: 1.4;
+        @include mixins.tablet {
+            padding: 13px 29px;
+        }
+        &.active {
+            color: var(--black);
+            background-color: var(--yellow);
+        }
+    }
+}

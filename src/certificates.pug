@@ -1,0 +1,27 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Сертификаты'
+    - var page = 'certificates'
+    - var headerBg = true
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Сертификаты'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/certificates/descriptor
+                include html/modules/certificates/description
+                include html/modules/certificates/about
+                include html/modules/certificates/buy
+                include html/modules/certificates/how
+                include html/modules/cards
+                include html/modules/faq
+            include html/modules/footer
