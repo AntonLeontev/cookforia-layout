@@ -126,6 +126,21 @@ h1,h2,h3,h4,h5,h6 {
         text-align: center;
     }
 }
+.section-text {
+    margin-top: 20px;
+    @include mixins.desktop {
+        text-align: center;
+        font-size: 24px;
+        max-width: 1362px;
+        margin: 80px auto 0;
+    }
+    & p:not(:first-child) {
+        margin-top: 24px;
+        @include mixins.desktop {
+            margin-top: 36px;
+        }
+    }
+}
 .link-btn {
     display: inline-block;
     background-color: var(--yellow);
@@ -137,6 +152,12 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 600;
     @include mixins.desktop {
         font-size: 20px;
+    }
+    &--wide {
+        padding: 10px 31px;
+        @include mixins.desktop {
+            padding: 10px 55px;
+        }
     }
 }
 

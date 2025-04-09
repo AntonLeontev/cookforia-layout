@@ -1,0 +1,25 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Акции'
+    - var page = 'stocks'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Акции'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/stocks/descriptor
+                include html/modules/stocks/celebrate
+                include html/modules/stocks/cards
+                include html/modules/studios
+                include html/modules/reviews
+                include html/modules/partners
+            include html/modules/footer

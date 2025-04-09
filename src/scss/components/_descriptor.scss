@@ -10,27 +10,68 @@
     background-repeat: no-repeat;
     @include mixins.desktop {
         padding: 348px 0;
-        &--noshadow {
+    }
+    &--noshadow {
+        @include mixins.desktop {
             background-color: var(--black);
             &::before {
                 display: none;
             }
         }
     }
+    &--half {
+        background-color: var(--black);
+        &::before {
+            display: none;
+        }
+        @include mixins.desktop {
+            background-color: var(--black);
+            padding-top: 196px;
+            padding-bottom: 60px;
+            min-height: 1000px;
+            & .descriptor__inner {
+                width: 50%;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        background: #000000BF;
+        background: #000000bf;
         z-index: v.$ui-index-1;
         pointer-events: none;
     }
     & .container {
         position: relative;
         z-index: v.$ui-index-2;
+    }
+    &__img {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .descriptor--half & {
+            display: none;
+            @include mixins.desktop {
+                display: block;
+                width: calc(50% - 55px);
+            }
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
     &__inner {
         text-align: center;
@@ -69,7 +110,7 @@
             padding-top: 101px;
         }
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             width: calc(100% - 134px);
             height: 1px;
@@ -101,9 +142,34 @@
         font-weight: 600;
         font-size: 20px;
         text-align: center;
+        &--short {
+            min-width: initial;
+            padding: 9px 19px;
+        }
         &:first-child {
             background-color: var(--yellow);
             color: var(--black);
+        }
+    }
+    &__timer {
+        margin-top: 60px;
+        color: var(--yellow);
+        @include mixins.desktop {
+            margin-top: 80px;
+            font-size: 20px;
+        }
+        & + .descriptor__links {
+            margin-top: 60px;
+            @include mixins.desktop {
+                margin-top: 80px;
+            }
+        }
+        & b {
+            display: block;
+            font-size: 24px;
+            @include mixins.desktop {
+                font-size: 40px;
+            }
         }
     }
 }
