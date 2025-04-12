@@ -2877,6 +2877,17 @@ h1, h2, h3, h4, h5, h6 {
 .footer__form-input::placeholder {
   color: var(--gray);
 }
+.footer__form-error {
+  display: block;
+  text-align: left;
+  max-width: 491px;
+  width: 100%;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  color: var(--red);
+  font-size: 14px;
+  margin: 8px auto;
+}
 .footer__form-btn {
   display: inline-block;
   background-color: var(--yellow);

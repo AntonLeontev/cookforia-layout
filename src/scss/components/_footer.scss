@@ -58,6 +58,16 @@
             color: var(--gray);
         }
     }
+    &__form-error {
+        display: block;
+        text-align: left;
+        max-width: 491px;
+        width: 100%;
+        align-self: flex-start;
+        color: var(--red);
+        font-size: 14px;
+        margin: 8px auto;
+    }
     &__form-btn {
         display: inline-block;
         background-color: var(--yellow);
