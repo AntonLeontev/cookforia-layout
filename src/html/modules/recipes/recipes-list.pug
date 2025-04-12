@@ -1,0 +1,102 @@
+section.recipes-list 
+    .container 
+        .recipes__inner
+            h2.recipes__title Рецепты: готовим со студией  Cookforia
+            .recipes__filters 
+                .recipes__filter.js-filterItem
+                    .recipes__filter-name.js-filterToggle По категориям
+                    ul.recipes__filter-list.js-filterList
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category1")
+                            label(for="category1") Блюда из мяса
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category2")
+                            label(for="category2") Блюда из рыбы
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category3")
+                            label(for="category3") Блюда из птицы
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category4")
+                            label(for="category4") Закуски
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category5")
+                            label(for="category5") Десерты
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category7")
+                            label(for="category7") Напитки
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category8")
+                            label(for="category8") Пицца и пироги
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category9")
+                            label(for="category9") Салаты
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category10")
+                            label(for="category10") Супы
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="category11")
+                            label(for="category11") Основные блюда
+                .recipes__filter.js-filterItem
+                    .recipes__filter-name.js-filterToggle По кухне
+                    ul.recipes__filter-list.js-filterList
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen1")
+                            label(for="kitchen1") Итальянская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen2")
+                            label(for="kitchen2") Грузинская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen3")
+                            label(for="kitchen3") Французская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen4")
+                            label(for="kitchen4") Азиатская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen5")
+                            label(for="kitchen5") Мексиканская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen6")
+                            label(for="kitchen6") Русская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen7")
+                            label(for="kitchen7") Тайская
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen8")
+                            label(for="kitchen8") Турецкая
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="kitchen9")
+                            label(for="kitchen9") Еще какая-то кухня
+                .recipes__filter.js-filterItem
+                    .recipes__filter-name.js-filterToggle По сложности
+                    ul.recipes__filter-list.js-filterList
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="complexity1")
+                            label(for="complexity1") Легкая
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="complexity2")
+                            label(for="complexity2") Средняя
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="complexity3")
+                            label(for="complexity3") Сложная
+                .recipes__filter.js-filterItem
+                    .recipes__filter-name.js-filterToggle Блюда от Шефа
+                    ul.recipes__filter-list.js-filterList
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="chef1")
+                            label(for="chef1") Гудков Владимир
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="chef2")
+                            label(for="chef2") Смирнов Алексей
+                        li.recipes__filter-item 
+                            input(type="checkbox" id="chef3")
+                            label(for="chef3") Никулин Влад
+            ul.recipes__items 
+                - for (let i = 1; i < 10; i++)
+                    li.recipes__item
+                        a(href="recipe.html").recipes__link 
+                            .recipes__img
+                                img(src="img/recipes/recipe.png", alt="")
+                            p.recipes__name Брускетта с томатами и моцареллой
+                            time(datetime="2025-02-03").recipes__date 03.02.2025
+            .recipes__pagination 
+                include ../../components/pagination

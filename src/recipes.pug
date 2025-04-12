@@ -1,0 +1,22 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Рецепты'
+    - var page = 'recipes'
+
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Рецепты' },
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/recipes/descriptor
+                include html/modules/recipes/search
+                include html/modules/recipes/recipes-list
+            include html/modules/footer

@@ -15,6 +15,8 @@
 @use "components/_header";
 @use "components/_footer";
 @use "components/_breadcrumbs";
+@use "components/_pagination";
+@use "components/_popup";
 
 
 @use "modules/_motivation";
@@ -33,3 +35,6 @@
 @use "modules/_services";
 @use "modules/_certificates";
 @use "modules/_celebrate";
+@use "modules/_search";
+@use "modules/_recipes";
+@use "modules/_recipe-content";

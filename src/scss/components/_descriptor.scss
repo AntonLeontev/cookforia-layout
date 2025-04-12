@@ -11,6 +11,12 @@
     @include mixins.desktop {
         padding: 348px 0;
     }
+    &--small-pt {
+        padding: 170px 0 115px;
+        @include mixins.desktop {
+            padding: 319px 0 348px;
+        }
+    }
     &--noshadow {
         @include mixins.desktop {
             background-color: var(--black);
@@ -78,6 +84,10 @@
         @include mixins.desktop {
             text-align: left;
         }
+    }
+    &__date {
+        display: none;
+        
     }
     &__title {
         font-weight: 600;

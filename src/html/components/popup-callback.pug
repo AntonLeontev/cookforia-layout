@@ -1,0 +1,21 @@
+#popup-callback.popup.js-popup
+  .popup__content
+    .popup__inner
+        .popup__close.js-popupClose
+        h5.popup__title Оставить заявку
+        form.popup__form
+                .popup__field
+                    input(type="text" name="fio" placeholder="Ваше имя").popup__input
+                    span.popup__error Ошибка! Поле обязательно для заполнения
+                .popup__field
+                    input(type="text" name="tel" placeholder="+7 (999) 000-00-00").popup__input.js-inputPhone
+                    span.popup__error Ошибка! Поле обязательно для заполнения
+                .popup__select
+                    select(name="studio" class="popup__select" id="select-studio") 
+                        option(value="" disabled selected) Выберете студию
+                        option(value="studio1") Студия на ул. Дыбенко, 8к1 
+                        option(value="studio2") Студия на Московский проспект 182-185
+                        option(value="studio3") Студия на ул. Ильюшина 5, корп. 1
+                    span.popup__error Ошибка! Поле обязательно для выбора
+                .popup__send 
+                    button(type="submit").js-formBtn Арендовать студию

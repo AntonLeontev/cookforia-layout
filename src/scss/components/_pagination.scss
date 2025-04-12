@@ -1,0 +1,68 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.pagination {
+    text-align: center;
+    &__link {
+        font-size: 20px;
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+    &__list {
+        display: none;
+        @include mixins.tablet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & li:first-child {
+            margin-right: 15px;
+        }
+        & li:last-child {
+            margin-left: 15px;
+        }
+    }
+    &__item {
+        margin: 0 5px;
+    }
+    
+    &__item a {
+        font-size: 24px;
+        color: var(--gray);
+        line-height: 40px;
+    }
+
+    &__item.active a {
+        display: block;
+        background-color: var(--yellow);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: var(--dark);
+    }
+
+    &__dots span {
+        margin: 0 5px;
+        cursor: default;
+        background: transparent;
+        font-size: 24px;
+        color: var(--gray);
+        line-height: 40px;
+
+    }
+
+    &__next a, &__prev a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        background-image: url(../img/icons/chevron-dark.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__prev a {
+        transform: rotate(180deg);
+    }
+}

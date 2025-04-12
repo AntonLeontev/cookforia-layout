@@ -1,0 +1,185 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.4);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.js-hide {
+        display: none;
+    }
+    &.js-block {
+        display: flex;
+    }
+    &__content {
+        max-width: 600px;
+        width: calc(100% - 32px);
+        height: 100%;
+        max-height: 517px;
+        overflow-y: auto;
+        margin: 16px auto;
+        background-color: var(--white);
+    }
+    &__inner {
+        padding: 40px 24px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__close {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        @include mixins.svg-mask("close");
+        background-color: var(--dark);
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    &__form {
+        text-align: left;
+        max-width: 253px;
+        width: 100%;
+        margin: 20px auto 0;
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include mixins.desktop {
+            max-width: 378px;
+            margin: 30px auto 0;
+        }
+    }
+    &__input {
+        width: 100%;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid var(--dark);
+        padding: 6px 0;
+        color: var(--text-dark);
+        font-size: 16px;
+        line-height: 1.4;
+        &::placeholder {
+            color: rgba(30, 30, 30, 0.5);
+        }
+    }
+    &__error {
+        display: block;
+        margin-top: 8px;
+        color: var(--red);
+        font-size: 12px;
+    }
+    &__select {
+        max-width: 253px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        @include mixins.desktop {
+            max-width: 378px;
+            width: 100%;
+        }
+        & select {
+            display: none;
+        }
+        & option {
+            display: none;
+        }
+        & .edd-root:not(.edd-root-has-value) {
+            & .edd-value {
+                color: rgba(30, 30, 30, 0.5);
+            }
+        }
+        & .edd-root-open {
+            .edd-group {
+                display: block;
+            }
+        }
+        & .edd-value {
+            border-bottom: 1px solid var(--dark);
+            padding: 6px 0;
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        & .edd-option-disabled {
+            display: none;
+        }
+        & .edd-group {
+            position: absolute;
+            display: none;
+            left: 0;
+            top: 43px;
+            background-color: var(--white);
+            width: 100%;
+        }
+
+        & .edd-select {
+            max-width: 100%;
+            cursor: pointer;
+            border: 0;
+            border-bottom: 1px solid var(--dark);
+            padding: 6px 0;
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        & .edd-option {
+            width: 100%;    
+            border-bottom: 1px solid rgba(30, 30, 30, 0.3);
+            padding: 6px 0 5px;      
+            color: var(--text-dark);  
+            font-size: 12px;
+            cursor: pointer;
+        }
+        & .edd-option-selected {
+            padding-inline: 10px;
+            border-color: var(--yellow);
+            background-color: var(--yellow);
+            border-radius: 4px;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                top: -1px;
+                background-color: var(--white);
+                z-index: 1;
+            }
+        }
+    }
+    &__send {
+        margin-top: auto;
+        align-self: center;
+        & button {
+            border: 0;
+            padding: 9px 19px;
+            background-color: transparent;
+            border: 1px solid var(--dark);
+            border-radius: 40px;
+            line-height: 1.4;
+            @include mixins.hover {
+                background-color: var(--yellow);
+                border-color: var(--yellow);
+                color: var(--dark);
+            }
+        }
+    }
+}

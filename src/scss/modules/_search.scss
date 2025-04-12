@@ -1,0 +1,72 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.search {
+    padding: 56px 0;
+    background-color: var(--bg);
+    text-align: center;
+    @include mixins.tablet-big {
+        padding: 28px 0;
+    }
+    &__inner {
+        @include mixins.tablet-big {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+    &__socials {
+        @include mixins.tablet-big {
+            @include mixins.flex-center;
+            gap: 19px;
+        }
+    }
+    &__socials-list {
+        justify-content: center;
+        gap: 16px;
+        margin-top: 16px;
+        @include mixins.tablet-big {
+            margin-top: 0;
+            gap: 10px;
+        }
+    }
+    &__social {
+        width: 24px;
+        height: 24px;
+    }
+    &__input-wrap {
+        position: relative;
+        max-width: 344px;
+        margin: 24px auto 0;
+        @include mixins.tablet-big {
+            margin: 0;
+            max-width: 373px;
+            flex: 0 0 373px;
+        }
+    }
+    &__input {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 10px 36px 11px 10px;
+        border: 0;
+        border-radius: 4px;
+        color: var(--dark);
+        &::placeholder {
+            color: #1e1e1e80;
+        }
+    }
+    &__input-btn {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        top: 0;
+        right: 10px;
+        background: url(../img/icons/search.svg) center no-repeat;
+    }
+}

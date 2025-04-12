@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Рецепты</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <script src="js/vendor.min.js" defer></script>
+  <script src="js/app.min.js" defer></script>
+</head>
+
+<body class="body recipes">
+  <div class="wrapper">
+    <header class="header js-header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="/">
+            <img src="img/icons/logo.svg" alt="Cookforia">
+          </a>
+          <button class="header__burger js-burger" type="button">
+            <span>Меню</span>
+          </button>
+          <ul class="header__links">
+            <li class="header__link">
+              <a href="#">Мастер-классы </a>
+            </li>
+            <li class="header__link">
+              <a href="events.html">Мероприятия</a>
+            </li>
+            <li class="header__link">
+              <a href="certificates.html">Сертификат</a>
+            </li>
+          </ul>
+          <a class="header__phone" href="tel:+78126113908">
+            <span>+7 (812) 611-39-08</span>
+          </a>
+          <ul class="header__socials">
+            <li class="header__social header__social--tg">
+              <a href="#" target="_blank" aria-label="telegram"> </a>
+            </li>
+            <li class="header__social header__social--instagram">
+              <a href="#" target="_blank" aria-label="instagram"> </a>
+            </li>
+            <li class="header__social header__social--vk">
+              <a href="#" target="_blank" aria-label="vk"> </a>
+            </li>
+          </ul>
+          <button class="header__callback js-popupOpen" type="button" data-popup="popup-callback">Обратный звонок </button>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumbs-list">
+          <li class="breadcrumb">
+            <a href="/">Главная</a>
+          </li>
+          <li class="breadcrumb">Рецепты</li>
+        </ol>
+      </div>
+    </div>
+    <nav class="nav js-nav">
+      <div class="nav__inner">
+        <button class="nav__close js-navClose" type="button" aria-label="Закрыть"></button>
+        <div class="nav__menu">
+          <a class="nav__home" href="/">Главная </a>
+          <ul class="nav__items">
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <a class="nav__link" href="events.html">Мероприятия</a>
+                <button class="nav__opener js-navToggle" type="button" aria-label="Список мероприятий"></button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">День рождения</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Свидание</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Тимбилдинг</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Детский праздник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Кулинарная вечеринка</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <button class="nav__opener js-navToggle" type="button">Индивидуальные мастер классы</button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Расписание сборных мастер-классов</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Кейтеринг</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Аренда студии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="recipes.html">Рецепты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Блог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="menu.html">Меню</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="certificates.html">Сертификаты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="stocks.html">Акции</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__footer">
+          <div class="nav__callback">Заказать мероприятие</div>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="descriptor">
+        <div class="descriptor__img" inert>
+          <img src="img/recipes/descriptor.jpg" alt="">
+        </div>
+        <div class="container">
+          <div class="descriptor__inner">
+            <h1 class="descriptor__title">Рецепты</h1>
+            <div class="descriptor__links">
+              <a class="descriptor__link" href="#">Заказать мероприятие</a>
+              <a class="descriptor__link" href="#">Мастер-классы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="search">
+        <div class="container">
+          <div class="search__inner">
+            <div class="search__socials">
+              <div class="search__socials-text">Подпишитесь на нас в социальных сетях</div>
+              <ul class="search__socials-list socials">
+                <li>
+                  <a class="search__social social social--vk" href="#" target="_blank"></a>
+                </li>
+                <li>
+                  <a class="search__social social social--tg" href="#" target="_blank"></a>
+                </li>
+                <li>
+                  <a class="search__social social social--instagram" href="#" target="_blank"> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="search__input-wrap">
+              <input class="search__input" type="text" placeholder="Найти рецепт по названию">
+              <button class="search__input-btn" type="button" aria-label="Найти"> </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="recipes-list">
+        <div class="container">
+          <div class="recipes__inner">
+            <h2 class="recipes__title">Рецепты: готовим со студией Cookforia</h2>
+            <div class="recipes__filters">
+              <div class="recipes__filter js-filterItem">
+                <div class="recipes__filter-name js-filterToggle">По категориям</div>
+                <ul class="recipes__filter-list js-filterList">
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category1">
+                    <label for="category1">Блюда из мяса</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category2">
+                    <label for="category2">Блюда из рыбы</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category3">
+                    <label for="category3">Блюда из птицы</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category4">
+                    <label for="category4">Закуски</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category5">
+                    <label for="category5">Десерты</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category7">
+                    <label for="category7">Напитки</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category8">
+                    <label for="category8">Пицца и пироги</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category9">
+                    <label for="category9">Салаты</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category10">
+                    <label for="category10">Супы</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="category11">
+                    <label for="category11">Основные блюда</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="recipes__filter js-filterItem">
+                <div class="recipes__filter-name js-filterToggle">По кухне</div>
+                <ul class="recipes__filter-list js-filterList">
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen1">
+                    <label for="kitchen1">Итальянская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen2">
+                    <label for="kitchen2">Грузинская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen3">
+                    <label for="kitchen3">Французская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen4">
+                    <label for="kitchen4">Азиатская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen5">
+                    <label for="kitchen5">Мексиканская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen6">
+                    <label for="kitchen6">Русская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen7">
+                    <label for="kitchen7">Тайская</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen8">
+                    <label for="kitchen8">Турецкая</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="kitchen9">
+                    <label for="kitchen9">Еще какая-то кухня</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="recipes__filter js-filterItem">
+                <div class="recipes__filter-name js-filterToggle">По сложности</div>
+                <ul class="recipes__filter-list js-filterList">
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="complexity1">
+                    <label for="complexity1">Легкая</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="complexity2">
+                    <label for="complexity2">Средняя</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="complexity3">
+                    <label for="complexity3">Сложная</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="recipes__filter js-filterItem">
+                <div class="recipes__filter-name js-filterToggle">Блюда от Шефа</div>
+                <ul class="recipes__filter-list js-filterList">
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="chef1">
+                    <label for="chef1">Гудков Владимир</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="chef2">
+                    <label for="chef2">Смирнов Алексей</label>
+                  </li>
+                  <li class="recipes__filter-item">
+                    <input type="checkbox" id="chef3">
+                    <label for="chef3">Никулин Влад</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="recipes__items">
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+              <li class="recipes__item">
+                <a class="recipes__link" href="recipe.html">
+                  <div class="recipes__img">
+                    <img src="img/recipes/recipe.png" alt="">
+                  </div>
+                  <p class="recipes__name">Брускетта с томатами и моцареллой</p>
+                  <time class="recipes__date" datetime="2025-02-03">03.02.2025</time>
+                </a>
+              </li>
+            </ul>
+            <div class="recipes__pagination">
+              <nav class="pagination">
+                <a class="pagination__link link-btn" href="#!">Показать больше</a>
+                <ol class="pagination__list">
+                  <li class="pagination__prev">
+                    <a href="#"></a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#">1</a>
+                  </li>
+                  <li class="pagination__item active">
+                    <a href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#">4</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#">5</a>
+                  </li>
+                  <li class="pagination__dots">
+                    <span>...</span>
+                  </li>
+                  <li class="pagination__next">
+                    <a href="#"> </a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <form class="footer__form">
+          <h6 class="footer__form-title">Забронировать мероприятие</h6>
+          <p class="footer__form-text">Оставьте ваши контакты и мы свяжемся с вами в самое ближайшее время</p>
+          <div class="footer__form-inputs">
+            <input class="footer__form-input" type="text" name="fio" placeholder="Ваше имя">
+            <input class="footer__form-input js-inputPhone" type="text" name="tel" placeholder="+7 (999) 000-00-00">
+          </div>
+          <button class="footer__form-btn" type="submit">Оставить заявку</button>
+          <div class="footer__form-policy">Нажимая на кнопку, Вы соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a>
+          </div>
+          <div class="footer__form-socials">
+            <a class="footer__form-social" href="#" target="_blank">Написать в WhatsApp</a>
+            <a class="footer__form-social footer__form-social--tg" href="#" target="_blank">Написать в Telegram</a>
+          </div>
+        </form>
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <img src="img/icons/logo.svg" alt="">
+          </div>
+          <div class="footer__copyrights">
+            <span>&copy;&nbsp;Все права защищены</span>
+            <span>Копирование информации с сайта запрещено</span>
+          </div>
+          <div class="footer__docs">
+            <a class="footer__doc" href="#" target="_blank">Условия предоставления услуг</a>
+            <a class="footer__doc" href="#" target="_blank">Политика обработки персональных данных</a>
+            <a class="footer__doc" href="#" target="_blank">Оферта</a>
+          </div>
+          <div class="footer__links">
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="/">Главная</a>
+              </li>
+              <li class="footer__link">
+                <a href="events.html">Мероприятия</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Мастер-классы</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Аренда студии</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Сборный мастер-класс</a>
+              </li>
+              <li class="footer__link">
+                <a href="recipes.html">Рецепты</a>
+              </li>
+            </ul>
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="#">Блог</a>
+              </li>
+              <li class="footer__link">
+                <a href="menu.html">Меню</a>
+              </li>
+              <li class="footer__link">
+                <a href="certificates.html">Сертификаты</a>
+              </li>
+              <li class="footer__link">
+                <a href="stocks.html">Акции</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="#">Лофт-пространство</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Детская студия</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__subscribe">
+            <div class="footer__subscribe-text">Подпишитесь на нас в социальных сетях:</div>
+            <ul class="footer__socials socials">
+              <li>
+                <a class="footer__social social social--vk" href="#" target="_blank"></a>
+              </li>
+              <li>
+                <a class="footer__social social social--tg" href="#" target="_blank"></a>
+              </li>
+              <li>
+                <a class="footer__social social social--instagram" href="#" target="_blank"> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyrights footer__copyrights--desktop">
+          <span>&copy;&nbsp;Все права защищены</span>
+          <span>Копирование информации с сайта запрещено</span>
+        </div>
+      </div>
+      <div class="footer__contacts js-footerContacts">
+        <a class="footer__contact" href="tel:+78126113908">Написать</a>
+        <a class="footer__contact" href="mailto:contact@cookforia.ru">Позвонить</a>
+      </div>
+    </footer>
+    <button class="scroll-btn js-scrollUp" type="button">Наверх</button>
+    <button class="calendar js-calendar" type="button" aria-label="Записаться"></button>
+    <div class="popup js-popup" id="popup-callback">
+      <div class="popup__content">
+        <div class="popup__inner">
+          <div class="popup__close js-popupClose"></div>
+          <h5 class="popup__title">Оставить заявку</h5>
+          <form class="popup__form">
+            <div class="popup__field">
+              <input class="popup__input" type="text" name="fio" placeholder="Ваше имя">
+              <span class="popup__error">Ошибка! Поле обязательно для заполнения</span>
+            </div>
+            <div class="popup__field">
+              <input class="popup__input js-inputPhone" type="text" name="tel" placeholder="+7 (999) 000-00-00">
+              <span class="popup__error">Ошибка! Поле обязательно для заполнения</span>
+            </div>
+            <div class="popup__select">
+              <select class="popup__select" name="studio" id="select-studio">
+                <option value="" disabled selected>Выберете студию</option>
+                <option value="studio1">Студия на ул. Дыбенко, 8к1 </option>
+                <option value="studio2">Студия на Московский проспект 182-185</option>
+                <option value="studio3">Студия на ул. Ильюшина 5, корп. 1</option>
+              </select>
+              <span class="popup__error">Ошибка! Поле обязательно для выбора</span>
+            </div>
+            <div class="popup__send">
+              <button class="js-formBtn" type="submit">Арендовать студию</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

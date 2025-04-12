@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let inputPhone = document.querySelector('.js-inputPhone');
-    if (inputPhone) {
-        var maskOptions = {
-          mask: '+{7} (000) 000-00-00'
-        };
-        var mask = IMask(inputPhone, maskOptions);
-    }
+  let inputPhone = document.querySelectorAll('.js-inputPhone');
+  if (inputPhone.length) {
+    inputPhone.forEach(function (input) {
+      var maskOptions = {
+        mask: '+{7} (000) 000-00-00'
+      };
+      var mask = IMask(input, maskOptions);
+    })
+  }
 });

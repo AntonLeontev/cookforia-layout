@@ -179,6 +179,7 @@
             font-size: 14px;
             background-color: var(--yellow);
             color: var(--black);
+            border: 0;
         }
         @include mixins.desktop-big {
             margin-left: 60px;
