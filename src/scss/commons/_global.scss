@@ -163,15 +163,33 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .75rem;
     background-color: var(--yellow);
     color: var(--black);
     border-radius: 40px;
     padding: 10px 20px;
     font-size: 20px;
     line-height: 1.4;
-    text-align: center;
     font-weight: 600;
     border: 0;
+    outline: 0;
+}
+
+.btn_outline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .75rem;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    border: var(--yellow) 1px solid;
     outline: 0;
 }
