@@ -1,0 +1,40 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.article {
+    padding: 56px 0;
+    @include mixins.desktop {
+        padding: 80px 0;
+    }
+    &-page {
+        & .descriptor__title {
+            max-width: 1339px;
+        }
+    }
+    &-content {
+        font-size: 16px;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+        & *:first-child {
+            margin-top: 0;
+        }
+        & *:last-child {
+            margin-bottom: 0;
+        }
+        & p {
+            margin-top: 10px;
+            @include mixins.desktop {
+                margin-top: 16px;
+            }
+        }
+        & img {
+            margin: 20px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            @include mixins.desktop {
+                margin: 50px 0;
+            }
+        }
+    }
+}

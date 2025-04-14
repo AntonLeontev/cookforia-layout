@@ -1,0 +1,21 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Шоколадный торт с клубникой и карамелью'
+    - var page = 'article-page'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Кулинарное путешествие: вкусы Италии на вашей кухне' },
+                [{ href: 'blog.html', text: 'Блог' }]
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/article/descriptor
+                include html/modules/article/article-content
+            include html/modules/footer

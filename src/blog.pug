@@ -1,0 +1,25 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Блог'
+    - var page = 'blog'
+
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Блог' },
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/blog/descriptor
+                include html/modules/blog/blog-cards
+                include html/modules/cards
+                include html/modules/studios
+                include html/modules/reviews
+                include html/modules/partners
+            include html/modules/footer

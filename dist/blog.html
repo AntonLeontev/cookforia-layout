@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Акции</title>
+  <title>Блог</title>
   <meta name="theme-color" content="#FFFFFF">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,7 +14,7 @@
   <script src="js/app.min.js" defer></script>
 </head>
 
-<body class="body stocks">
+<body class="body blog">
   <div class="wrapper">
     <header class="header js-header">
       <div class="container">
@@ -60,7 +60,7 @@
           <li class="breadcrumb">
             <a href="/">Главная</a>
           </li>
-          <li class="breadcrumb">Акции</li>
+          <li class="breadcrumb">Блог</li>
         </ol>
       </div>
     </div>
@@ -163,91 +163,246 @@
       </div>
     </nav>
     <main class="main">
-      <section class="descriptor descriptor--half">
+      <section class="descriptor">
         <div class="descriptor__img" inert>
-          <img src="img/stocks/descriptor.webp" alt="">
+          <img src="img/blog/descriptor.jpeg" alt="">
         </div>
         <div class="container">
           <div class="descriptor__inner">
-            <h1 class="descriptor__title">Название акции</h1>
-            <p class="descriptor__text">Описание акции: например акция на мастер-классы для мужчин на 23 февраля, скидка для мужчин 20%</p>
-            <div class="descriptor__timer">
-              <span>Окончание акции через:</span>
-              <b>4 дня | 16 часов | 15 минут</b>
-            </div>
-            <div class="descriptor__links descriptor__links--noline">
-              <a class="descriptor__link descriptor__link--short" href="#">Оставить заявку</a>
+            <h1 class="descriptor__title">Блог</h1>
+            <div class="descriptor__links">
+              <a class="descriptor__link" href="#">Заказать мероприятие</a>
+              <a class="descriptor__link" href="#">Записаться на МК</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="section celebrate">
+      <section class="section blog">
         <div class="container">
-          <div class="celebrate__inner">
-            <h2 class="section-title"> </h2>
-            <div class="section-text">
-              <p>Хотите провести день рождение на нашем мастер-классе? А может быть, корпоратив с коллегами, который запомниться всем?</p>
-              <p>
-                <b>Мы приготовили для вас скидки и подарки!</b>
-              </p>
+          <div class="blog__inner">
+            <h2 class="section-title">Новости и статьи студии Cookforia</h2>
+            <div class="blog__slider swiper js-sliderBlog">
+              <ul class="blog__list swiper-wrapper">
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card1.jpeg" alt="">
+                    <p class="blog__name">Кулинарное путешествие: вкусы Италии на вашей кухне</p>
+                    <time class="blog__date" datetime="2025-02-10">10.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card2.jpeg" alt="">
+                    <p class="blog__name">От простого к изысканному: 3 простых рецепта пасты</p>
+                    <time class="blog__date" datetime="2025-02-09">09.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card3.jpeg" alt="">
+                    <p class="blog__name">Секреты шеф-повара: мастер-класс по приготовлению роллов</p>
+                    <time class="blog__date" datetime="2025-02-10">08.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card1.jpeg" alt="">
+                    <p class="blog__name">Кулинарное путешествие: вкусы Италии на вашей кухне</p>
+                    <time class="blog__date" datetime="2025-02-10">10.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card2.jpeg" alt="">
+                    <p class="blog__name">От простого к изысканному: 3 простых рецепта пасты</p>
+                    <time class="blog__date" datetime="2025-02-09">09.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card3.jpeg" alt="">
+                    <p class="blog__name">Секреты шеф-повара: мастер-класс по приготовлению роллов</p>
+                    <time class="blog__date" datetime="2025-02-10">08.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card1.jpeg" alt="">
+                    <p class="blog__name">Кулинарное путешествие: вкусы Италии на вашей кухне</p>
+                    <time class="blog__date" datetime="2025-02-10">10.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card2.jpeg" alt="">
+                    <p class="blog__name">От простого к изысканному: 3 простых рецепта пасты</p>
+                    <time class="blog__date" datetime="2025-02-09">09.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card3.jpeg" alt="">
+                    <p class="blog__name">Секреты шеф-повара: мастер-класс по приготовлению роллов</p>
+                    <time class="blog__date" datetime="2025-02-10">08.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card1.jpeg" alt="">
+                    <p class="blog__name">Кулинарное путешествие: вкусы Италии на вашей кухне</p>
+                    <time class="blog__date" datetime="2025-02-10">10.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card2.jpeg" alt="">
+                    <p class="blog__name">От простого к изысканному: 3 простых рецепта пасты</p>
+                    <time class="blog__date" datetime="2025-02-09">09.02.2025</time>
+                  </a>
+                </li>
+                <li class="blog__item swiper-slide">
+                  <a class="blog__card" href="article.html">
+                    <img class="blog__img" src="img/blog/card3.jpeg" alt="">
+                    <p class="blog__name">Секреты шеф-повара: мастер-класс по приготовлению роллов</p>
+                    <time class="blog__date" datetime="2025-02-10">08.02.2025</time>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-pagination-blog swiper-pagination"></div>
             </div>
-            <div class="celebrate__slider swiper js-sliderCelebrate">
-              <div class="celebrate__list swiper-wrapper">
-                <div class="celebrate__item swiper-slide">
-                  <div class="celebrate__img">
-                    <img src="img/celebrate/slide1.png" alt="">
-                  </div>
-                  <h5 class="celebrate__item-title">День рождения </h5>
-                  <ul class="celebrate__item-list">
-                    <li>Скидка 10% для всех гостей</li>
-                    <li>Фартук от студии в подарок</li>
-                    <li>еще что то</li>
-                    <li>еще что то</li>
-                  </ul>
-                  <p class="celebrate__item-text">Предложение действует при покупке от 5 билетов на мастер-классы из календаря</p>
-                  <div class="celebrate__item-link">
-                    <a class="link-btn" href="#">Подробнее</a>
-                  </div>
-                </div>
-                <div class="celebrate__item swiper-slide">
-                  <div class="celebrate__img">
-                    <img src="img/celebrate/slide2.png" alt="">
-                  </div>
-                  <h5 class="celebrate__item-title">Корпоратив</h5>
-                  <ul class="celebrate__item-list">
-                    <li>Скидка 10% для всех гостей</li>
-                    <li>Фартук от студии в подарок</li>
-                  </ul>
-                  <p class="celebrate__item-text">Предложение действует при покупке от 5 билетов на мастер-классы из календаря а может и ещё когда-то</p>
-                  <div class="celebrate__item-link">
-                    <a class="link-btn" href="#">Подробнее</a>
-                  </div>
-                </div>
-                <div class="celebrate__item swiper-slide">
-                  <div class="celebrate__img">
-                    <img src="img/celebrate/slide3.png" alt="">
-                  </div>
-                  <h5 class="celebrate__item-title">Свидание для двоих 14.02</h5>
-                  <ul class="celebrate__item-list">
-                    <li>Скидка 10% для всех гостей</li>
-                    <li>Фартук от студии в подарок</li>
-                    <li>еще что то</li>
-                    <li>еще что то</li>
-                    <li>еще что то</li>
-                  </ul>
-                  <p class="celebrate__item-text">Предложение действует при покупке от 5 билетов на мастер-классы из календаря а может и ещё когда-то</p>
-                  <div class="celebrate__item-link">
-                    <a class="link-btn" href="#">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination-celebrate swiper-pagination"></div>
-            </div>
+            <button class="btn blog__btn" type="button">Показать больше</button>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
+          <h3 class="section-title">Расписание сборных мастер-классов</h3>
+          <div class="cards__slider swiper js-sliderMaster">
+            <ul class="cards__list swiper-wrapper">
+              <li class="card swiper-slide">
+                <div class="card__head">
+                  <div class="card__img">
+                    <img src="img/index/slider1.jpg" alt="">
+                  </div>
+                  <ul class="card__tags">
+                    <li class="card__tag">#14февраля</li>
+                    <li class="card__tag">#новинка</li>
+                    <li class="card__tag">#рецепт</li>
+                  </ul>
+                  <div class="card__label">15 мест осталось</div>
+                  <div class="card__title">День всех влюбленных</div>
+                </div>
+                <div class="card__body">
+                  <div class="card__blocks">
+                    <div class="card__block">
+                      <b>6000 ₽</b>
+                      <span>Взрослый билет</span>
+                    </div>
+                    <div class="card__block">
+                      <b>ПТ, 14 февраля</b>
+                      <span>19:00 - 22:00</span>
+                    </div>
+                  </div>
+                  <div class="card__address">Студия на ул. Дыбенко, 8к1 </div>
+                  <div class="card__link">
+                    <a class="link-btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card__head">
+                  <div class="card__img">
+                    <img src="img/index/slider1.jpg" alt="">
+                  </div>
+                  <ul class="card__tags">
+                    <li class="card__tag">#14февраля</li>
+                    <li class="card__tag">#новинка</li>
+                    <li class="card__tag">#рецепт</li>
+                  </ul>
+                  <div class="card__label">15 мест осталось</div>
+                  <div class="card__title">День всех влюбленных или что-то длиннее </div>
+                </div>
+                <div class="card__body">
+                  <div class="card__blocks">
+                    <div class="card__block">
+                      <b>6000 ₽</b>
+                      <span>Взрослый билет</span>
+                    </div>
+                    <div class="card__block">
+                      <b>ПТ, 14 февраля</b>
+                      <span>19:00 - 22:00</span>
+                    </div>
+                  </div>
+                  <div class="card__address">Студия на ул. Дыбенко, 8к1 </div>
+                  <div class="card__link">
+                    <a class="link-btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card__head">
+                  <div class="card__img">
+                    <img src="img/index/slider1.jpg" alt="">
+                  </div>
+                  <ul class="card__tags">
+                    <li class="card__tag">#14февраля</li>
+                    <li class="card__tag">#новинка</li>
+                    <li class="card__tag">#рецепт</li>
+                  </ul>
+                  <div class="card__label">15 мест осталось</div>
+                  <div class="card__title">День всех влюбленных</div>
+                </div>
+                <div class="card__body">
+                  <div class="card__blocks">
+                    <div class="card__block">
+                      <b>6000 ₽</b>
+                      <span>Взрослый билет</span>
+                    </div>
+                    <div class="card__block">
+                      <b>ПТ, 14 февраля</b>
+                      <span>19:00 - 22:00</span>
+                    </div>
+                  </div>
+                  <div class="card__address">Студия на ул. Дыбенко, 8к1 </div>
+                  <div class="card__link">
+                    <a class="link-btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card__head">
+                  <div class="card__img">
+                    <img src="img/index/slider1.jpg" alt="">
+                  </div>
+                  <ul class="card__tags">
+                    <li class="card__tag">#14февраля</li>
+                    <li class="card__tag">#новинка</li>
+                    <li class="card__tag">#рецепт</li>
+                  </ul>
+                  <div class="card__label">15 мест осталось</div>
+                  <div class="card__title">День всех влюбленных</div>
+                </div>
+                <div class="card__body">
+                  <div class="card__blocks">
+                    <div class="card__block">
+                      <b>6000 ₽</b>
+                      <span>Взрослый билет</span>
+                    </div>
+                    <div class="card__block">
+                      <b>ПТ, 14 февраля</b>
+                      <span>19:00 - 22:00</span>
+                    </div>
+                  </div>
+                  <div class="card__address">Студия на ул. Дыбенко, 8к1, мне кажется может быть много слов</div>
+                  <div class="card__link">
+                    <a class="link-btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination-masters swiper-pagination"></div>
+          </div>
+          <a class="cards__link" href="#">Смотреть все мастер-класы</a>
           <h3 class="section-title">Мероприятия у нас</h3>
           <div class="cards__slider swiper js-sliderEvents">
             <div class="cards__list swiper-wrapper">

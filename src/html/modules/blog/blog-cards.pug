@@ -1,0 +1,24 @@
+section.section.blog 
+    .container 
+        .blog__inner 
+            h2.section-title Новости и статьи студии Cookforia
+            .blog__slider.swiper.js-sliderBlog
+                ul.blog__list.swiper-wrapper
+                    - for (let i = 1; i < 5; i++)
+                        li.blog__item.swiper-slide
+                            a(href="article.html").blog__card
+                                img(src="img/blog/card1.jpeg", alt="").blog__img
+                                p.blog__name Кулинарное путешествие: вкусы Италии на вашей кухне
+                                time(datetime="2025-02-10").blog__date 10.02.2025
+                        li.blog__item.swiper-slide
+                            a(href="article.html").blog__card
+                                img(src="img/blog/card2.jpeg", alt="").blog__img
+                                p.blog__name От простого к изысканному: 3 простых рецепта пасты
+                                time(datetime="2025-02-09").blog__date 09.02.2025
+                        li.blog__item.swiper-slide
+                            a(href="article.html").blog__card
+                                img(src="img/blog/card3.jpeg", alt="").blog__img
+                                p.blog__name Секреты шеф-повара:  мастер-класс по приготовлению роллов
+                                time(datetime="2025-02-10").blog__date 08.02.2025
+                .swiper-pagination-blog.swiper-pagination
+            button(type="button").btn.blog__btn Показать больше
