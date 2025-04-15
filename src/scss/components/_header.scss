@@ -180,6 +180,9 @@
             background-color: var(--yellow);
             color: var(--black);
             border: 0;
+            @include mixins.hover {
+                background-color: #FFCC00;
+            }
         }
         @include mixins.desktop-big {
             margin-left: 60px;

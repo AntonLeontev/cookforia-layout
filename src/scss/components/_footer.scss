@@ -80,6 +80,9 @@
         font-weight: 600;
         margin-top: 30px;
         border: 0;
+        @include mixins.hover {
+            background-color: #FFCC00;
+        }
         @include mixins.desktop {
             margin-top: 60px;
         }

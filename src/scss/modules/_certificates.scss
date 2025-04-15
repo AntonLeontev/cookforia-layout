@@ -132,9 +132,9 @@
             }
         }
         &__btn {
-            margin-top: 40px;
+            margin: 40px auto 0;
             @include mixins.desktop {
-                margin-top: 50px;
+                margin: 50px auto 0;
             }
         }
     }
@@ -169,9 +169,9 @@
             }
         }
         &__btn {
-            margin-top: 20px;
+            margin: 20px auto 0;
             @include mixins.desktop {
-                margin-top: 60px;
+                margin: 60px auto 0;
             }
         }
     }

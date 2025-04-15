@@ -22,6 +22,30 @@
         & *:last-child {
             margin-bottom: 0;
         }
+        & h1 {
+            font-size: 40px;
+            margin-top: 24px;
+            @include mixins.desktop {
+                margin-top: 36px;
+                font-size: 70px;
+            }
+        }
+        & h2 {
+            font-size: 20px;
+            margin-top: 18px;
+            @include mixins.desktop {
+                margin-top: 28px;
+                font-size: 40px;
+            }
+        }
+        & h3 {
+            font-size: 20px;
+            margin-top: 16px;
+            @include mixins.desktop {
+                margin-top: 24px;
+                font-size: 36px;
+            }
+        }
         & p {
             margin-top: 10px;
             @include mixins.desktop {

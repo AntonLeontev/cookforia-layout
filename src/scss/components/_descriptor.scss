@@ -152,6 +152,10 @@
         font-weight: 600;
         font-size: 20px;
         text-align: center;
+        @include mixins.hover {
+            background-color: var(--yellow);
+            color: var(--dark);
+        }
         &--short {
             min-width: initial;
             padding: 9px 19px;
@@ -159,6 +163,9 @@
         &:first-child {
             background-color: var(--yellow);
             color: var(--black);
+            @include mixins.hover {
+                background-color: #FFCC00;
+            }
         }
     }
     &__timer {

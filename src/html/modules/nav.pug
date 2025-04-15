@@ -2,11 +2,12 @@ nav.nav.js-nav
     .nav__inner
         button(type="button" aria-label="Закрыть").nav__close.js-navClose
         .nav__menu
-            a(href="/").nav__home Главная 
             ul.nav__items
+                li.nav__item
+                    a(href="/").nav__link.active Главная
                 li.nav__item.js-navItem
                     .nav__item-head
-                        a(href="events.html").nav__link Мероприятия
+                        a(href="events.html").nav__link.active Мероприятия
                         button(type="button" aria-label="Список мероприятий").nav__opener.js-navToggle
                     .nav__accordion
                         .nav__accordion-animation

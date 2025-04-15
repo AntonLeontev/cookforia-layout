@@ -40,4 +40,19 @@
             background-color: var(--yellow);
         }
     }
+    & .cards__list {
+        @include mixins.tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 48px;
+        }
+    }
+    & .card {
+        @include mixins.tablet {
+            width: 347px;
+            height: auto;
+        }
+    }
 }
