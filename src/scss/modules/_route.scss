@@ -50,9 +50,75 @@
             }
         }
     }
+    &__info-list {
+        & li {
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+            @include mixins.desktop {
+                font-size: 24px;
+                padding-left: 36px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                background-color: currentColor;
+                border-radius: 50%;
+                left: 10px;
+                top: calc(50% - 1px);
+                @include mixins.desktop {
+                    width: 4px;
+                    height: 4px;
+                    left: 16px;
+                    top: calc(50% - 2px);
+                }
+            }
+        }
+    }
     &__socials {
         @include mixins.desktop {
             justify-content: center;
+        }
+    }
+    &__tabs {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        @include mixins.desktop {
+            display: none;
+        }
+    }
+    &__tab {
+        padding: 13px;
+        font-weight: 600;
+        border-radius: 40px;
+        color: #00000080;
+        background-color: var(--bg);
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        @include mixins.desktop {
+            width: auto;
+        }
+        @include mixins.hover {
+            color: var(--black);
+        }
+        &.active {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+    }
+    &__content {
+        display: none;
+        @include mixins.desktop {
+            display: block;
+        }
+        &.show {
+            display: block;
         }
     }
     &__map {
@@ -83,11 +149,29 @@
             margin-top: 0;
         }
     }
+    &__title-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (min-width: 1440px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
     &__title {
         font-size: 24px;
         font-weight: 600;
         @include mixins.desktop {
             font-size: 40px;
+        }
+    }
+    &__link {
+        align-self: center;
+        margin: 0 auto;
+        @include mixins.tablet-big {
+            align-self: flex-start;
+            margin: 0;
+            text-align: left;
         }
     }
     &__text {
@@ -123,7 +207,7 @@
         gap: 40px;
         @include mixins.tablet-big {
             text-align: left;
-            flex-direction: row;
+            flex-direction: row-reverse;
         }
         @include mixins.desktop {
             margin-top: 25px;

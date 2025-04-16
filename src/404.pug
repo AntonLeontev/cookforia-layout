@@ -1,0 +1,15 @@
+block variables
+    - var title = 'Ой, страница не найдена...'
+    - var page = 'error-page'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            include html/modules/nav
+            main.main
+                include html/modules/404
+            include html/modules/footer

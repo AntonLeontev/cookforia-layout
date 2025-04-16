@@ -29,6 +29,10 @@
 .socials-transparent {
     @include mixins.flex-center;
     gap: 16px;
+    @include mixins.desktop {
+        justify-content: center;
+        width: 100%;
+    }
 }
 .social-transparent {
     width: 32px;
@@ -37,6 +41,9 @@
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
+    &::after {
+        display: none;
+    }
     &--tg {
         mask-image: url(../img/icons/tg.svg);
     }

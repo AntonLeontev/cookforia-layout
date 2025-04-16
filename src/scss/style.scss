@@ -45,3 +45,7 @@
 @use "modules/_about";
 @use "modules/_photo";
 @use "modules/_route";
+@use "modules/_error-page";
+
+@use "modules/rent/_rent-description";
+@use "modules/rent/_rent-price";

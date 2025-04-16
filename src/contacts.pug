@@ -1,0 +1,20 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Контакты'
+    - var page = 'contacts'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Контакты'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/contacts
+            include html/modules/footer

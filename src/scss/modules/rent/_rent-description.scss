@@ -1,0 +1,50 @@
+@use "../../commons/_mixins.scss" as mixins;
+@use "../../commons/_var.scss" as v;
+
+.rent-description {
+    &__inner {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 80px;
+            display: flex;
+            gap: 48px;
+        }
+        @include mixins.desktop-big {
+            gap: 120px;
+        }
+    }
+    &__text {
+        text-align: left;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+        & p {
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+    }
+    &__media {
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 16px;
+        @include mixins.desktop {
+            flex: 0 0 600px;
+            margin-top: 0;
+        }
+        @include mixins.desktop-big {
+            flex: 0 0 748px;
+            margin-top: 0;
+        }
+    }
+    &__link {
+        margin-top: 20px;
+        text-align: center;
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+        & a {
+            font-size: 20px;
+        }
+    }
+}

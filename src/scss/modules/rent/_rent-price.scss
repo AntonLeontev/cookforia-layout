@@ -1,0 +1,84 @@
+@use "../../commons/_mixins.scss" as mixins;
+@use "../../commons/_var.scss" as v;
+
+.rent-price {
+    padding-bottom: 30px;
+    @include mixins.desktop {
+        padding-bottom: 100px;
+    }
+    &__value {
+        font-size: 20px;
+        font-weight: 600;
+        @include mixins.desktop {
+            text-align: center;
+            font-size: 24px;
+        }
+        & span {
+            color: var(--yellow);
+        }
+        @include mixins.desktop {
+            text-align: center;
+            margin-top: 10px;
+        }
+        &:first-of-type {
+            margin-top: 20px;
+            @include mixins.desktop {
+                margin-top: 80px;
+            }
+        }
+    }
+    &__description {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+    }
+    &__location {
+        margin-top: 60px;
+        @include mixins.desktop {
+            margin-top: 50px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__text {
+        @include mixins.desktop {
+            margin-top: 10px;
+        }
+    }
+    &__items {
+        margin-top: 13px;
+        @include mixins.desktop {
+            margin-top: 40px;
+            @include mixins.flex-center-center;
+            gap: 100px;
+        }
+    }
+    &__item {
+        margin-top: 10px;
+        font-weight: 600;
+        display: flex;
+        gap: 10px;
+        @include mixins.desktop {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        @include mixins.desktop-big {
+            margin-top: 0;
+            font-size: 20px;
+        }
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            @include mixins.svg-mask('geo');
+            background-color: var(--yellow);
+        }
+    }
+}

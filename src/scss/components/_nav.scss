@@ -92,6 +92,10 @@
         &.active .nav__link {
             padding: 0;
         }
+        &.active .nav__opener {
+            color: var(--dark);
+            font-weight: 600;
+        }
         &.active .nav__opener::after {
             transform: rotate(90deg);
             background-color: var(--dark);

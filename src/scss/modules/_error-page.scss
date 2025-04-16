@@ -1,0 +1,80 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.error-page {
+    & .header {
+        background-color: var(--black);
+        @include mixins.desktop {
+            background-color: #000000E5;
+        }
+    }
+    & .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: var(--black);
+        @include mixins.desktop {
+            margin-top: 99px;
+        }
+    }
+    & .footer {
+        @include mixins.desktop {
+            padding-top: 60px;
+        }
+    }
+    & .footer__inner {
+        padding-top: 0;
+    }
+    &__inner {
+        text-align: center;
+        color: var(--white);
+        @include mixins.tablet-big {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            text-align: left;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        @include mixins.tablet-big {
+            font-size: 50px;
+        }
+    }
+    &__text {
+        margin: 20px auto 0;
+        max-width: 288px;
+        @include mixins.tablet-big {
+            font-size: 16px;
+            max-width: initial;
+        }
+    }
+    &__link {
+        margin-top: 80px;
+        min-width: 251px;
+        font-size: 20px;
+    }
+    &__img {
+        margin: 50px auto 0;
+        @include mixins.tablet-big {
+            margin: 0;
+            max-width: 400px;
+        }
+        @include mixins.desktop{
+            max-width: initial;
+        }
+        & img {
+            margin: 0 auto;
+        }
+    }
+}
+.error-wrapper {
+    padding-top: 194px;
+    padding-bottom: 56px;
+    height: 100%;
+    @include mixins.desktop{
+        padding: 80px 0;
+    }
+}
