@@ -83,6 +83,30 @@ h1,h2,h3,h4,h5,h6 {
         right: 0;
         left: auto;
     }
+    & .arrows--bg .swiper-button-prev, .arrows--bg .swiper-button-next {
+        border: 0;
+        border-radius: 50%;
+        mask: initial;
+        transform: rotate(180deg);
+        left: -0;
+        background: var(--yellow);
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            @include mixins.svg-mask('chevron');
+            mask-size: 18px;
+            background-color: var(--text-dark);
+        }
+    }
+    & .arrows--bg .swiper-button-next {
+        transform: rotate(0);
+        right: 0;
+        left: auto;
+    }
 }
 .container {
     padding: 0 16px;
@@ -120,6 +144,13 @@ h1,h2,h3,h4,h5,h6 {
         text-align: center;
         @include mixins.desktop {
             font-size: 40px;
+        }
+    }
+    &--nomobile {
+        display: none;
+        @include mixins.tablet {
+            display: block;
+            text-align: center;
         }
     }
     @include mixins.desktop {

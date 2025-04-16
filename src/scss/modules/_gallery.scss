@@ -2,6 +2,40 @@
 @use "../commons/_var.scss" as v;
 
 .gallery {
+    &__tabs {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        @include mixins.desktop {
+            margin-top: 80px;
+            & + .gallery__slider {
+                margin-top: 40px;
+            }
+        }
+    }
+    &__tab {
+        padding: 13px;
+        font-weight: 600;
+        border-radius: 40px;
+        color: #00000080;
+        background-color: var(--bg);
+        cursor: pointer;
+        width: calc(50% - 5px);
+        text-align: center;
+        @include mixins.desktop {
+            width: auto;
+            min-width: 180px;
+        }
+        @include mixins.hover {
+            color: var(--black);
+        }
+        &.active {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+    }
     &__slider {
         margin-top: 20px;        
         padding: 0 16px 20px;

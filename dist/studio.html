@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Студия Cookforia на улице Дыбенко</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, viewport-fit=cover, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet">
+  <script src="js/vendor.min.js" defer></script>
+  <script src="js/app.min.js" defer></script>
+</head>
+
+<body class="body studio">
+  <div class="wrapper">
+    <header class="header js-header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="/">
+            <img src="img/icons/logo.svg" alt="Cookforia">
+          </a>
+          <button class="header__burger js-burger" type="button">
+            <span>Меню</span>
+          </button>
+          <ul class="header__links">
+            <li class="header__link">
+              <a href="#">Мастер-классы </a>
+            </li>
+            <li class="header__link">
+              <a href="events.html">Мероприятия</a>
+            </li>
+            <li class="header__link">
+              <a href="certificates.html">Сертификат</a>
+            </li>
+          </ul>
+          <a class="header__phone" href="tel:+78126113908">
+            <span>+7 (812) 611-39-08</span>
+          </a>
+          <ul class="header__socials">
+            <li class="header__social header__social--tg">
+              <a href="#" target="_blank" aria-label="telegram"> </a>
+            </li>
+            <li class="header__social header__social--instagram">
+              <a href="#" target="_blank" aria-label="instagram"> </a>
+            </li>
+            <li class="header__social header__social--vk">
+              <a href="#" target="_blank" aria-label="vk"> </a>
+            </li>
+          </ul>
+          <button class="header__callback js-popupOpen" type="button" data-popup="popup-callback">Обратный звонок </button>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumbs-list">
+          <li class="breadcrumb">
+            <a href="/">Главная</a>
+          </li>
+          <li class="breadcrumb">
+            <a href="rent.html">Аренда студии</a>
+          </li>
+          <li class="breadcrumb">Студия на ул. Дыбенко</li>
+        </ol>
+      </div>
+    </div>
+    <nav class="nav js-nav">
+      <div class="nav__inner">
+        <button class="nav__close js-navClose" type="button" aria-label="Закрыть"></button>
+        <div class="nav__menu">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a class="nav__link active" href="/">Главная</a>
+            </li>
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <a class="nav__link" href="events.html">Мероприятия</a>
+                <button class="nav__opener js-navToggle" type="button" aria-label="Список мероприятий"></button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">День рождения</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Свидание</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Тимбилдинг</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Детский праздник</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Кулинарная вечеринка</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item js-navItem">
+              <div class="nav__item-head">
+                <button class="nav__opener js-navToggle" type="button">Индивидуальные мастер классы</button>
+              </div>
+              <div class="nav__accordion">
+                <div class="nav__accordion-animation">
+                  <div class="nav__accordion-wrapper">
+                    <div class="nav__accordion-content">
+                      <ul class="nav__accordion-list">
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Корпоратив</a>
+                        </li>
+                        <li class="nav__accordion-item">
+                          <a class="nav__accordion-link" href="#">Девичник</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Расписание сборных мастер-классов</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Кейтеринг</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Аренда студии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="recipes.html">Рецепты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="menu.html">Меню</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="certificates.html">Сертификаты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="stocks.html">Акции</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__footer">
+          <div class="nav__callback">Заказать мероприятие</div>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="descriptor">
+        <div class="descriptor__img" inert>
+          <img src="img/studio/descriptor.webp" alt="">
+        </div>
+        <div class="container">
+          <div class="descriptor__inner">
+            <h1 class="descriptor__title">Студия Cookforia на улице Дыбенко</h1>
+            <div class="descriptor__links">
+              <a class="descriptor__link" href="#">Заказать мероприятие</a>
+              <a class="descriptor__link" href="#">Мастер-классы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section description">
+        <div class="container">
+          <h2 class="section-title">Заголовок о студии</h2>
+          <div class="description__box">
+            <div class="description__content">
+              <p class="description__text">Компания Cookforia предлагает своим гостям атмосферную и просторную лофт-студию для проведения любых мероприятий. В нашей студии дружелюбная и непринужденная атмосфера, интересные рецептыи команда профессионалов, влюбленных в искусство кулинарии. В студии используется доступный инвентарь и доступная техника, чтобы наши гости с легкостью смогли повторить приготовления блюд дома. </p>
+              <button class="description__btn btn" type="button">Арендовать студию</button>
+            </div>
+            <div class="description__media">
+              <img src="img/studio/scheme.jpg" alt="">
+            </div>
+            <button class="description__btn description__btn--mobile btn" type="button">Арендовать студию</button>
+          </div>
+        </div>
+      </section>
+      <section class="section scheme">
+        <div class="container">
+          <div class="scheme__content">
+            <img src="img/studio/3d.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section chef">
+        <div class="container">
+          <h3 class="section-title">Главный шеф-повар студии</h3>
+          <div class="chef__inner">
+            <div class="chef__slider swiper js-sliderContent">
+              <ul class="chef__imgs swiper-wrapper">
+                <li class="chef__img swiper-slide">
+                  <img src="./img/studio/chef1.webp" alt="">
+                </li>
+                <li class="chef__img swiper-slide">
+                  <img src="./img/studio/chef2.webp" alt="">
+                </li>
+                <li class="chef__img swiper-slide">
+                  <img src="./img/studio/chef3.webp" alt="">
+                </li>
+                <li class="chef__img swiper-slide">
+                  <img src="./img/studio/chef4.webp" alt="">
+                </li>
+              </ul>
+              <div class="swiper-pagination-chef swiper-pagination"></div>
+              <div class="chef__arrows arrows arrows--bg">
+                <button class="swiper-button-prev swiper-button-prev-chef"></button>
+                <button class="swiper-button-next swiper-button-prev-chef"></button>
+              </div>
+            </div>
+            <div class="chef__description">
+              <div class="chef__name">Смирнов Алексей</div>
+              <div class="chef__post">Шеф-повар, кондитер, пекарь</div>
+              <p class="chef__text">Люблю готовить, считаю что приготовление пищи это сакральное дело, и относиться к нему надо с душой и внимательностью, одним словом любить своё дело».В кулинарии более 13 лет, за это время успел познать гастрономический дзен.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section about">
+        <div class="container">
+          <h4 class="section-title">В студии как дома</h4>
+          <div class="about__inner">
+            <p class="about__text">В кулинарной студии Cookforia используется оборудование и техника, аналогичная той, что есть на вашей домашней кухне. Забудьте о профессиональном оборудовании ресторанов! Здесь вы научитесь готовить любимые блюда, используя привычные духовки, плиты, блендеры и другую бытовую технику. Это значит, что все рецепты, которые вы освоите на наших мастер-классах, вы сможете легко повторить дома, не тратясь на дорогостоящее профессиональное оборудование. Мы верим, что кулинария должна быть доступна каждому, и поэтому создали комфортную обстановку, максимально приближенную к домашней.</p>
+            <ul class="about__items">
+              <li class="about__item">
+                <div class="about__icon">
+                  <img src="img/studio/about1.png" alt="">
+                </div>
+                <div class="about__name">Мебель и кухня</div>
+              </li>
+              <li class="about__item">
+                <div class="about__icon">
+                  <img src="img/studio/about2.png" alt="">
+                </div>
+                <div class="about__name">Бытовая техника</div>
+              </li>
+              <li class="about__item">
+                <div class="about__icon">
+                  <img src="img/studio/about3.png" alt="">
+                </div>
+                <div class="about__name">Кухонный инветарь</div>
+              </li>
+              <li class="about__item">
+                <div class="about__icon">
+                  <img src="img/studio/about4.png" alt="">
+                </div>
+                <div class="about__name">Посуда</div>
+              </li>
+            </ul>
+          </div>
+          <div class="about__slider swiper js-sliderAbout">
+            <div class="about__imgs swiper-wrapper">
+              <div class="about__img swiper-slide">
+                <img src="./img/studio/about-slider1.png" alt="">
+              </div>
+              <div class="about__img swiper-slide">
+                <img src="./img/studio/about-slider2.png" alt="">
+              </div>
+              <div class="about__img swiper-slide">
+                <img src="./img/studio/about-slider3.png" alt="">
+              </div>
+              <div class="about__img swiper-slide">
+                <img src="./img/studio/about-slider4.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination-about swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section photo">
+        <div class="container">
+          <h3 class="section-title">Эффектная фотозона для ваших прекрасных фотографий</h3>
+          <div class="photo__slider swiper js-sliderDefault">
+            <ul class="photo__imgs swiper-wrapper">
+              <li class="photo__img swiper-slide">
+                <img src="./img/studio/photo1.webp" alt="">
+              </li>
+              <li class="photo__img swiper-slide">
+                <img src="./img/studio/photo2.webp" alt="">
+              </li>
+              <li class="photo__img swiper-slide">
+                <img src="./img/studio/photo3.webp" alt="">
+              </li>
+            </ul>
+            <div class="swiper-pagination-default swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section route">
+        <div class="container">
+          <div class="route__info">
+            <div class="route__info-item">
+              <div class="route__info-title">Часы работы</div>
+              <div class="route__info-text">Ежедневно: 10:00 - 22:00</div>
+            </div>
+            <div class="route__info-item">
+              <div class="route__info-title">Контактный телефон/Email</div>
+              <div class="route__info-text">
+                <a href="tel:+78126112462">+7 (812) 611-24-62</a>
+                <a href="mailto:contact@cookforia.ru">contact@cookforia.ru</a>
+              </div>
+            </div>
+            <div class="route__info-item">
+              <div class="route__info-title">Социальные сети</div>
+              <div class="route__info-text">
+                <ul class="route__socials socials-transparent">
+                  <li>
+                    <a class="route__social social-transparent social-transparent--tg" href="#" target="_blank"></a>
+                  </li>
+                  <li>
+                    <a class="route__social social-transparent social-transparent--instagram" href="#" target="_blank"> </a>
+                  </li>
+                  <li>
+                    <a class="route__social social-transparent social-transparent--vk" href="#" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="route__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acb773d422472c9ae23234a3a5280eb3018094d4c9b369d6695657d747d999a63&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+          </div>
+          <div class="route__box">
+            <div class="route__description">
+              <div class="route__title">Студия Cookforia</div>
+              <div class="route__text">Адрес: улица Дыбенко, 8к1</div>
+              <div class="route__subtitle">Как добраться:</div>
+              <ul class="route__list">
+                <li class="route__item">
+                  <b>На метро: </b>
+                  <p>до станции метро “Московская” вход 5, далее по Московскому проспекту в сторону центра города итд</p>
+                </li>
+                <li class="route__item">
+                  <b>На машине:</b>
+                  <p>59.8551558086576, 30.319051838643826</p>
+                </li>
+                <li class="route__item">
+                  <b>Парковки:</b>
+                  <p>написать где можно поближе припарковать автомобиль</p>
+                </li>
+                <li class="route__item">
+                  <b>На автобусе: </b>
+                  <p>написать как проехать на автобусе</p>
+                </li>
+              </ul>
+            </div>
+            <div class="route__img">
+              <img src="img/studio/map.png" alt="Карта">
+            </div>
+          </div>
+          <div class="route__footer">
+            <div class="route__footer-link">построить маршрут в навигаторе</div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--bg reviews">
+        <div class="container">
+          <h3 class="section-title section-title--nomobile">Отзывы о студии Cookforia на ул. Дыбенко </h3>
+          <div class="reviews__inner reviews__inner--narrow">
+            <div class="reviews__total">Все отзывы <span>5.0</span>
+            </div>
+            <a class="reviews__yandex" href="#">Карты 5.0 </a>
+            <a class="reviews__google" href="#">5.0 </a>
+            <a class="reviews__link link-btn" href="#">Оставить отзыв </a>
+            <div class="reviews__count">
+              <p>5.0 из 5</p>
+              <img src="img/reviews/stars.svg" alt="">
+              <span>На основе 242 оценок</span>
+            </div>
+          </div>
+          <div class="reviews__item reviews__item--solo">
+            <div class="reviews__address">Студия на ул. Дыбенко </div>
+            <div class="reviews__media">
+              <img src="img/reviews/media1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h3 class="section-title">В нашей студии проведено множество замечательных мероприятий</h3>
+          <ul class="gallery__tabs">
+            <li class="gallery__tab active">Корпоративы</li>
+            <li class="gallery__tab">Девичник</li>
+            <li class="gallery__tab">День рождения</li>
+            <li class="gallery__tab">Детский праздник</li>
+            <li class="gallery__tab">Свидание</li>
+            <li class="gallery__tab">Вечеринка</li>
+          </ul>
+          <div class="gallery__slider swiper js-sliderGallery">
+            <div class="gallery__list swiper-wrapper">
+              <div class="gallery__item swiper-slide">
+                <img src="./img/events/gallery1.webp" alt="">
+              </div>
+              <div class="gallery__item swiper-slide">
+                <img src="./img/events/gallery1.webp" alt="">
+              </div>
+              <div class="gallery__item swiper-slide">
+                <img src="./img/events/gallery1.webp" alt="">
+              </div>
+              <div class="gallery__item swiper-slide">
+                <img src="./img/events/gallery1.webp" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination-gallery swiper-pagination"></div>
+            <div class="gallery__arrows arrows--bg">
+              <button class="swiper-button-prev-gallery swiper-button-prev"></button>
+              <button class="swiper-button-next-gallery swiper-button-next"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <form class="footer__form">
+          <h6 class="footer__form-title">Забронировать мероприятие</h6>
+          <p class="footer__form-text">Оставьте ваши контакты и мы свяжемся с вами в самое ближайшее время</p>
+          <div class="footer__form-inputs">
+            <input class="footer__form-input" type="text" name="fio" placeholder="Ваше имя">
+            <span class="footer__form-error">Ошибка! Поле обязательно для заполнения</span>
+            <input class="footer__form-input js-inputPhone" type="text" name="tel" placeholder="+7 (999) 000-00-00">
+            <span class="footer__form-error">Ошибка! Поле обязательно для заполнения</span>
+          </div>
+          <button class="footer__form-btn" type="submit">Оставить заявку</button>
+          <div class="footer__form-policy">Нажимая на кнопку, Вы соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a>
+          </div>
+          <div class="footer__form-socials">
+            <a class="footer__form-social" href="#" target="_blank">Написать в WhatsApp</a>
+            <a class="footer__form-social footer__form-social--tg" href="#" target="_blank">Написать в Telegram</a>
+          </div>
+        </form>
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <img src="img/icons/logo.svg" alt="">
+          </div>
+          <div class="footer__copyrights">
+            <span>&copy;&nbsp;Все права защищены</span>
+            <span>Копирование информации с сайта запрещено</span>
+          </div>
+          <div class="footer__docs">
+            <a class="footer__doc" href="#" target="_blank">Условия предоставления услуг</a>
+            <a class="footer__doc" href="#" target="_blank">Политика обработки персональных данных</a>
+            <a class="footer__doc" href="#" target="_blank">Оферта</a>
+          </div>
+          <div class="footer__links">
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="/">Главная</a>
+              </li>
+              <li class="footer__link">
+                <a href="events.html">Мероприятия</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Мастер-классы</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Аренда студии</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Сборный мастер-класс</a>
+              </li>
+              <li class="footer__link">
+                <a href="recipes.html">Рецепты</a>
+              </li>
+            </ul>
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="blog.html">Блог</a>
+              </li>
+              <li class="footer__link">
+                <a href="menu.html">Меню</a>
+              </li>
+              <li class="footer__link">
+                <a href="certificates.html">Сертификаты</a>
+              </li>
+              <li class="footer__link">
+                <a href="stocks.html">Акции</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="footer__col">
+              <li class="footer__link">
+                <a href="#">Лофт-пространство</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Детская студия</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__subscribe">
+            <div class="footer__subscribe-text">Подпишитесь на нас в социальных сетях:</div>
+            <ul class="footer__socials socials">
+              <li>
+                <a class="footer__social social social--vk" href="#" target="_blank"></a>
+              </li>
+              <li>
+                <a class="footer__social social social--tg" href="#" target="_blank"></a>
+              </li>
+              <li>
+                <a class="footer__social social social--instagram" href="#" target="_blank"> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyrights footer__copyrights--desktop">
+          <span>&copy;&nbsp;Все права защищены</span>
+          <span>Копирование информации с сайта запрещено</span>
+        </div>
+      </div>
+      <div class="footer__contacts js-footerContacts">
+        <a class="footer__contact" href="tel:+78126113908">Написать</a>
+        <a class="footer__contact" href="mailto:contact@cookforia.ru">Позвонить</a>
+      </div>
+    </footer>
+    <button class="scroll-btn js-scrollUp" type="button">Наверх</button>
+    <button class="calendar js-calendar" type="button" aria-label="Записаться"></button>
+    <div class="popup js-popup" id="popup-callback">
+      <div class="popup__content">
+        <div class="popup__inner">
+          <div class="popup__close js-popupClose"></div>
+          <h5 class="popup__title">Оставить заявку</h5>
+          <form class="popup__form">
+            <div class="popup__field">
+              <input class="popup__input" type="text" name="fio" placeholder="Ваше имя">
+              <span class="popup__error">Ошибка! Поле обязательно для заполнения</span>
+            </div>
+            <div class="popup__field">
+              <input class="popup__input js-inputPhone" type="text" name="tel" placeholder="+7 (999) 000-00-00">
+              <span class="popup__error">Ошибка! Поле обязательно для заполнения</span>
+            </div>
+            <div class="popup__select">
+              <select class="popup__select" name="studio" id="select-studio">
+                <option value="" disabled selected>Выберете студию</option>
+                <option value="studio1">Студия на ул. Дыбенко, 8к1 </option>
+                <option value="studio2">Студия на Московский проспект 182-185</option>
+                <option value="studio3">Студия на ул. Ильюшина 5, корп. 1</option>
+              </select>
+              <span class="popup__error">Ошибка! Выберете студию</span>
+            </div>
+            <div class="popup__send">
+              <button class="js-formBtn" type="submit">Арендовать студию</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

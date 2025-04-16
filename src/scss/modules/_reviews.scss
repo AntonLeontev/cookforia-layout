@@ -14,9 +14,17 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px 40px;
+            &--narrow {
+                max-width: 748px;
+                margin: 18px auto 0;
+            }
         }
         @include mixins.desktop {
             margin-top: 80px;
+            &--narrow {
+                max-width: 748px;
+                margin: 80px auto 0;
+            }
         }
     }
     &__total {
@@ -139,6 +147,17 @@
         }
         @include mixins.desktop {
             margin-top: 60px;
+        }
+    }
+    &__item {
+        &--solo {
+            margin: 20px auto 0;
+            max-width: 748px;
+            & .reviews__address {
+                @include mixins.tablet {
+                    display: none;
+                }
+            }
         }
     }
     &__address {

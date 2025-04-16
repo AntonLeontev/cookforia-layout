@@ -1,0 +1,36 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.description {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 80px;
+            font-size: 24px;
+            flex-direction: row;
+            align-items: center;
+            gap: 68px;
+        }
+    }
+    &__btn {
+        display: none;
+        @include mixins.desktop {
+            display: block;
+            margin-top: 40px;
+        }
+        &--mobile {
+            display: block;
+            @include mixins.desktop {
+                display: none;
+            }
+        }
+    }
+    &__media {
+        @include mixins.desktop {
+            flex: 0 0 643px;
+        }
+    }
+}

@@ -26,3 +26,24 @@
         background-image: url(../img/icons/vk-fill.png);
     }
 }
+.socials-transparent {
+    @include mixins.flex-center;
+    gap: 16px;
+}
+.social-transparent {
+    width: 32px;
+    height: 32px;
+    background-color: var(--yellow);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    &--tg {
+        mask-image: url(../img/icons/tg.svg);
+    }
+    &--instagram {
+        mask-image: url(../img/icons/instagram.svg);
+    }
+    &--vk {
+        mask-image: url(../img/icons/vk.svg);
+    }
+}

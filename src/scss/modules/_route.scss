@@ -1,0 +1,141 @@
+@use "../commons/_mixins.scss" as mixins;
+@use "../commons/_var.scss" as v;
+
+.route {
+    &__info {
+        @include mixins.desktop {
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+        }
+    }
+    &__info-item {
+        &:not(:first-child) {
+            margin-top: 30px;
+            @include mixins.desktop {
+                margin-top: 0;
+            }
+        }
+        &:first-child {
+            @include mixins.desktop {
+                width: 360px;
+            }
+        }
+    }
+    &__info-title {
+        font-weight: 600;
+        font-size: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--yellow);
+        margin-bottom: 18px;
+        @include mixins.desktop {
+            font-size: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    &__info-text {
+        font-size: 24px;
+        margin-top: 18px;
+        & a {
+            display: block;
+        }
+        @include mixins.desktop {
+            display: flex;
+            & a:first-child {
+                &::after {
+                    content: '/';
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    &__socials {
+        @include mixins.desktop {
+            justify-content: center;
+        }
+    }
+    &__map {
+        border-radius: 16px;
+        height: 228px;
+        overflow: hidden;
+        margin-top: 56px;
+        @include mixins.tablet-big {
+            height: 385px;
+        }
+        @include mixins.desktop {
+            margin-top: 80px;
+        }
+    }
+    &__box {
+        @include mixins.tablet-big {
+            display: flex;
+            gap: 36px;
+        }
+        @include mixins.desktop {
+            gap: 112px;
+            margin-top: 20px;
+        }
+    }
+    &__description {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 0;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 40px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &__item {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    &__img {
+        margin-top: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include mixins.tablet-big {
+            flex: 0 0 642px;
+        }
+        @include mixins.desktop {
+            align-self: flex-end;
+            margin-top: 0;
+        }
+    }
+    &__footer {
+        margin-top: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        @include mixins.tablet-big {
+            text-align: left;
+            flex-direction: row;
+        }
+        @include mixins.desktop {
+            margin-top: 25px;
+        }
+    }
+    &__footer-link {
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: underline;
+        @include mixins.tablet-big {
+            flex: 0 0 642px;
+            margin-left: auto;
+        }
+    }
+}

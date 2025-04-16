@@ -1,0 +1,28 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Студия Cookforia на улице Дыбенко'
+    - var page = 'studio'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Студия на ул. Дыбенко' },
+                [{ href: 'rent.html', text: 'Аренда студии' }]
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/studio/descriptor
+                include html/modules/studio/description
+                include html/modules/studio/scheme
+                include html/modules/studio/chef
+                include html/modules/studio/about
+                include html/modules/studio/photo
+                include html/modules/studio/route
+                include html/modules/studio/reviews
+                include html/modules/studio/gallery
+            include html/modules/footer

@@ -1,0 +1,20 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Аренда студии'
+    - var page = 'rent'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Аренда'},
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/rent/descriptor
+            include html/modules/footer
