@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Шоколадный торт с клубникой и карамелью</title>
+  <title>Отдельный мастер-класс</title>
   <meta name="theme-color" content="#FFFFFF">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,7 +14,7 @@
   <script src="js/app.min.js" defer></script>
 </head>
 
-<body class="body recipe">
+<body class="body mk-separate">
   <div class="wrapper">
     <header class="header js-header">
       <div class="container">
@@ -61,9 +61,12 @@
             <a href="/">Главная</a>
           </li>
           <li class="breadcrumb">
-            <a href="recipes.html">Рецепты</a>
+            <a href="mk.html">Мастер-классы</a>
           </li>
-          <li class="breadcrumb">Шоколадный торт с клубникой и карамелью</li>
+          <li class="breadcrumb">
+            <a href="#">Кухни мира</a>
+          </li>
+          <li class="breadcrumb">Итальянская кухня</li>
         </ol>
       </div>
     </div>
@@ -168,182 +171,282 @@
       </div>
     </nav>
     <main class="main">
-      <section class="descriptor descriptor--small-pt">
-        <div class="descriptor__img" inert>
-          <img src="img/recipe/descriptor.webp" alt="">
-        </div>
+      <section class="section section--bg product">
         <div class="container">
-          <div class="descriptor__inner">
-            <time class="descriptor__date" datetime="2025-02-10">10.02.2025</time>
-            <h1 class="descriptor__title">Шоколадный торт с клубникой и карамелью</h1>
-            <div class="descriptor__links">
-              <a class="descriptor__link" href="#">Заказать мероприятие</a>
-              <a class="descriptor__link" href="#">Мастер-классы</a>
+          <div class="product__inner">
+            <div class="product__banner">
+              <div class="product__img" inert>
+                <img src="img/mk/product.png" alt="">
+              </div>
+              <div class="product__banner-text">
+                <div class="product__labels">
+                  <div class="product__label">15 мест осталось </div>
+                  <div class="product__label product__label--icon">18+</div>
+                  <div class="product__label product__label--red">ХИТ</div>
+                </div>
+                <div class="product__name">Итальянская кухня</div>
+                <div class="product__info">
+                  <div class="product__info-item">Вс, 19 января</div>
+                  <div class="product__info-item">14:00 - 17:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="product__price">
+              <div class="product__logo">
+                <img src="img/icons/logo-black.svg" alt="">
+              </div>
+              <div class="product__price-label">Адрес студии:</div>
+              <div class="product__address">СПб, ул. Дыбенко, 8к1</div>
+              <div class="product__parameters">
+                <div class="product__parameter">
+                  <span>Продолжительность</span>
+                  <span>12:00 - 15:00</span>
+                </div>
+              </div>
+              <div class="product__total">
+                <div class="product__price-text">Стоимость</div>
+                <div class="product__box">
+                  <div class="product__radio">
+                    <input type="radio" name="age" disabled checked id="adult">
+                    <label for="adult">Взрослые</label>
+                  </div>
+                  <b class="product__price-value">3700 ₽</b>
+                </div>
+                <button class="btn btn--wide product__btn" type="button">Купить билет</button>
+              </div>
+            </div>
+          </div>
+          <div class="product__gallery">
+            <div class="product__gallery-head">
+              <div class="product__title">Блюда мастер-класса</div>
+              <div class="arrows arrows--line">
+                <button class="product-button-prev swiper-button-prev"></button>
+                <button class="product-button-next swiper-button-next"></button>
+              </div>
+            </div>
+            <div class="product__slider swiper js-sliderProduct">
+              <ul class="product__list swiper-wrapper">
+                <li class="product__item swiper-slide">
+                  <div class="product__item-img">
+                    <img src="img/mk/product-holder1.png" alt="">
+                  </div>
+                  <div class="product__item-name">Меню #1</div>
+                  <div class="product__item-text">Салат Цезарь с курицей и перепелиными яйцами</div>
+                </li>
+                <li class="product__item swiper-slide">
+                  <div class="product__item-img">
+                    <img src="img/mk/product-holder2.png" alt="">
+                  </div>
+                  <div class="product__item-name">Меню #1</div>
+                  <div class="product__item-text">Домашняя паста карбонара</div>
+                </li>
+                <li class="product__item swiper-slide">
+                  <div class="product__item-img">
+                    <img src="img/mk/product-holder3.png" alt="">
+                  </div>
+                  <div class="product__item-name">Меню #1</div>
+                  <div class="product__item-text">Милфей 1000 слоев</div>
+                </li>
+                <li class="product__item swiper-slide">
+                  <div class="product__item-img">
+                    <img src="img/mk/product-holder4.png" alt="">
+                  </div>
+                  <div class="product__item-name">Меню #1</div>
+                  <div class="product__item-text">Салат с авокадо, жареным Бри и соусом песто</div>
+                </li>
+                <li class="product__item swiper-slide">
+                  <div class="product__item-img">
+                    <img src="img/mk/product-holder5.png" alt="">
+                  </div>
+                  <div class="product__item-name">Меню #1</div>
+                  <div class="product__item-text">Салат Цезарь с курицей и перепелиными яйцами</div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="recipe-content">
+      <section class="section stages">
         <div class="container">
-          <div class="content">
-            <p>Ищете идеальный рецепт впечатляющего десерта? Ваш поиск окончен! Шоколадный торт с клубникой и карамелью — это изысканное лакомство, которое привнесет нотку элегантности в любое торжество. Этот десерт сочетает в себе насыщенный вкус бисквитного коржа, освежающую кислинку клубники и нежную сладость карамели. Узнайте, как приготовить этот шедевр и поразите своих гостей!</p>
-            <div>
-              <div class="box">
-                <div class="list">
-                  <b>Шоколадный бисквит на белках</b>
-                  <ul>
-                    <li>2 шт. – яичные белки</li>
-                    <li>20 г – сахара</li>
-                    <li>30 г – сахарная пудра</li>
-                    <li>5 г – какао-порошок</li>
-                    <li>20 г – муки,</li>
-                    <li>5 ч.л. – лимонный сок</li>
-                    <li>1 пакетик – ванильного сахара</li>
-                  </ul>
-                </div>
-                <div>
-                  <p>Белки взбиваем, взбивать начинаем с самой маленькой скорости миксера и по мере увеличения белков в объеме увеличиваем скорость. Белки взбиваем до плотности, добавляем сахар, ванильный сахар и лимонный сок, взбиваем до плотной блестящей массы.</p>
-                  <p>Муку просеиваем с какао и сахарной пудрой, добавляем к взбитым белкам. Аккуратно перемешиваем, делаем это быстро, что бы белки как можно меньше потеряли воздуха.Тесто выкладываем в форму, форму ничем смазывать не нужно! Выпекаем в разогретойдо 180 С духовке около 10-15 минут, духовку не открываем. Готовность проверяем шпажкой.</p>
-                  <p>Охладить и вырезать круг диаметром 17 см.</p>
-                </div>
-              </div>
-              <div class="slider swiper js-sliderContent">
-                <div class="slides swiper-wrapper">
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder1.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder2.png" alt="">
-                  </div>
-                </div>
-                <div class="swiper-pagination-slider swiper-pagination"></div>
-                <div class="arrows arrows--bg">
-                  <button class="swiper-button-prev"></button>
-                  <button class="swiper-button-next"></button>
-                </div>
-              </div>
+          <h4 class="section-title">За 3 часа незабываемых впечатлений вас ждет:</h4>
+          <ol class="stages__list">
+            <li class="stages__item">
+              <div class="stages__title">Встреча гостей</div>
+              <ul class="stages__text">
+                <li>Приветственный фуршет (доп. услуга)</li>
+                <li>Welcome drinks</li>
+              </ul>
+            </li>
+            <li class="stages__item">
+              <div class="stages__title">Начинаем мастер-класс</div>
+              <ul class="stages__text">
+                <li>Готовим 3 блюда под руководством шеф-повара</li>
+                <li>Пьем напитки</li>
+                <li>Задаем вопросы шефу</li>
+                <li>Общаемся</li>
+              </ul>
+            </li>
+            <li class="stages__item">
+              <div class="stages__title">Вкусный ужин</div>
+              <ul class="stages__text">
+                <li>Наслаждаемся приготовленными блюдами</li>
+                <li>Фотографируемся</li>
+                <li>Танцуем</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="section price">
+        <div class="container">
+          <h3 class="section-title">Что входит в стоимость</h3>
+          <div class="price__list price__list--two">
+            <div class="price__list-col">
+              <div class="price__list-item">Безлимитный безалкогольный бар</div>
+              <div class="price__list-item">Работа профессионального шеф-повара</div>
+              <div class="price__list-item">Работа профессионального шеф-повара</div>
             </div>
-            <div>
-              <div class="box">
-                <div class="list">
-                  <b>Карамель</b>
-                  <ul>
-                    <li>100 г – сахара</li>
-                    <li>100 г – сливок</li>
-                    <li>60 г – сливочного масла</li>
-                    <li>100 г – клубничное пюре</li>
-                    <li>7 г – желатинащепотка соли по желанию.</li>
-                  </ul>
-                </div>
-                <div>
-                  <p>Из сахара приготовить сухую карамель. Влить горячие сливки, перемешать до однородности. Из клубники сделать пюре и протереть через сито, чтобы не было косточек.</p>
-                  <p>Пробить блендером масло с клубникой. К карамели добавить клубничное масло, заранее замоченный и набухший желатин. Пробить блендером. Залить в форму (диаметром 17) выстеленную пищевой пленкой. </p>
-                  <p>Заморозить.</p>
-                </div>
-              </div>
-              <div class="slider swiper js-sliderContent">
-                <div class="slides swiper-wrapper">
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder2.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder1.png" alt="">
-                  </div>
-                </div>
-                <div class="swiper-pagination-slider swiper-pagination"></div>
-                <div class="arrows">
-                  <button class="swiper-button-prev"></button>
-                  <button class="swiper-button-next"></button>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="box">
-                <div class="list">
-                  <b>Мусс с молочным шоколадом</b>
-                  <ul>
-                    <li>225 г – сливок 35%</li>
-                    <li>70 г – черного шоколада</li>
-                    <li>100 г – молока</li>
-                    <li>6 г – листового желатина</li>
-                    <li>2 шт. – белка</li>
-                    <li>80 г – сахара1/2 стручка – ванили</li>
-                  </ul>
-                </div>
-                <div>
-                  <p>Желатин замочить в холодной воде. Молоко вскипятить с ванилью. Дать настояться 15 минут. Смешать с растопленным шоколадом. Добавить желатин. Остудить до 30 град. Подмешать французскую меренгу и взбитые сливки.</p>
-                  <p>
-                    <b>Французская меренга.</b>
-                    <br /> К белкам добавить сахар и прогреть до 60 градусов. Перелить в миску комбайна и взбивать до устойчивых пиков.
-                  </p>
-                </div>
-              </div>
-              <div class="slider swiper js-sliderContent">
-                <div class="slides swiper-wrapper">
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder2.png" alt="">
-                  </div>
-                </div>
-                <div class="swiper-pagination-slider swiper-pagination"></div>
-                <div class="arrows">
-                  <button class="swiper-button-prev"></button>
-                  <button class="swiper-button-next"></button>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="box">
-                <p>
-                  <b>Сборка</b>
-                </p>
-                <div>
-                  <p>На дно формы или кольца, поставленного на ровную поверхность, покрытую слоем плотной пленки, диаметром 19 см выложить 1/2 часть мусса. Кладем заготовку из компота и карамели. Вылить остальной мусс по краю формы, накрыть бисквитом, слегка прокручивая. Поставитьв морозилку минимум на 6 часов, лучше на ночь. На второй день покрыть гляссажем, украсить по своему вкусу.</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="box">
-                <div class="list">
-                  <b>Гляссаж с молочным шоколадом</b>
-                  <ul>
-                    <li>50 г – воды</li>
-                    <li>100 г – сахара</li>
-                    <li>100 г – инвертного сиропа</li>
-                    <li>100 г – молочного шоколада</li>
-                    <li>67 г – сгущенного молока</li>
-                    <li>10 г – желатина</li>
-                  </ul>
-                </div>
-                <div>
-                  <p>Сахар, инвертный сироп, воду довести до 103 градусов. Вылить на смесь сгущенного молока, рубленного шоколада и набухшего желатина. Размешать до однородности, пробить блендером. Поставить в холодильник минимум на 12 часов. Перед использованием разогреть на водяной бане или микроволновке до 30-35 градусов.</p>
-                </div>
-              </div>
-              <div class="slider swiper js-sliderContent">
-                <div class="slides swiper-wrapper">
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder1.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder3.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder2.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder1.png" alt="">
-                  </div>
-                  <div class="slide swiper-slide">
-                    <img src="./img/recipe/holder2.png" alt="">
-                  </div>
-                </div>
-                <div class="swiper-pagination-slider swiper-pagination"></div>
-                <div class="arrows">
-                  <button class="swiper-button-prev"></button>
-                  <button class="swiper-button-next"></button>
-                </div>
-              </div>
+            <div class="price__list-col">
+              <div class="price__list-item">Меню на 3-4 позиции из 300+ видов блюд</div>
+              <div class="price__list-item">Дегустация алкогольных напитков</div>
+              <div class="price__list-item">Дегустация алкогольных напитков</div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="section faq">
+        <div class="container">
+          <h4 class="section-title">Вопросы, которые нам часто задают</h4>
+          <ul class="faq__list">
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Какие мероприятия вы проводите?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Мы организуем кулинарные мастер-классы для взрослых и детей, корпоративные тимбилдинги, дни рождения, девичники, детские праздники и многое другое.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Как проходит кулинарный мастер-класс?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Гости готовят блюда под руководством шеф-повара, который делится рецептами и кулинарными секретами. После приготовления вы наслаждаетесь созданными блюдами в уютной атмосфере нашей кулинарной студии.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Можно ли провести мероприятие в вашей студии с друзьями?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Да, мы предлагаем частные кулинарные вечеринки, где вы и ваши друзья сможете вместе приготовить еду и приятно провести время.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Какое кухонное оснащение используется на мастер-классах?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Наша студия оснащена профессиональным оборудованием и инструментами, необходимыми для приготовления разнообразных блюд.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Проводите ли вы кулинарные тимбилдинги для корпоративных клиентов?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Да, мы специализируемся на кулинарных тимбилдингах, которые способствуют сплочению коллектива через совместное приготовление пищи.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Как записаться на кулинарное приключение в вашей студии?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Вы можете связаться с нами по телефону или через форму на сайте для бронирования участия в кулинарном мастер-классе или организации частного мероприятия.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Можно ли приносить свои напитки на мероприятие?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>Да, вы можете принести свои алкогольные и безалкогольные напитки без дополнительной оплаты.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="faq__item js-faqItem">
+              <div class="faq__question js-faqQuestion">
+                <span>Есть ли ограничения по количеству участников на мероприятиях?</span>
+              </div>
+              <div class="faq__accordion">
+                <div class="faq__accordion-animation">
+                  <div class="faq__accordion-wrapper">
+                    <div class="faq__accordion-content">
+                      <div class="faq__answer">
+                        <p>В зависимости от формата мероприятия, мы можем принять группы от 2 до 60 человек. Пожалуйста, уточняйте детали при бронировании.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

@@ -60,6 +60,16 @@
             display: flex;
             justify-content: space-between;
         }
+        &--two {
+            margin-top: 20px;
+            @include mixins.tablet-big {
+                justify-content: center;
+                gap: 100px;
+            }
+            @include mixins.tablet-big {
+                margin-top: 80px;
+            }
+        }
     }
     &__list-title {
         margin-top: 30px;

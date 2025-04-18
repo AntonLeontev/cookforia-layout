@@ -1,0 +1,24 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Отдельный мастер-класс'
+    - var page = 'mk-separate'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Итальянская кухня' },
+                [{ href: 'mk.html', text: 'Мастер-классы' },
+                { href: '#', text: 'Кухни мира' }]
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/mk-separate/product
+                include html/modules/stages
+                include html/modules/mk-separate/price
+                include html/modules/faq
+            include html/modules/footer

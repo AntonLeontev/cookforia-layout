@@ -1,0 +1,24 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Сборные мастер-классы'
+    - var page = 'mk-combined'
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Сборные мастер-классы' },
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/mk-combined/descriptor
+                include html/modules/mk-combined/description
+                include html/modules/mk-combined/cards
+                include html/modules/certificate
+                include html/modules/faq
+            include html/modules/footer

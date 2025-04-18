@@ -1,0 +1,40 @@
+@use "../../commons/_mixins.scss" as mixins;
+@use "../../commons/_var.scss" as v;
+
+.mk-combined {
+    &__inner {
+        margin-top: 20px;
+        @include mixins.tablet-big {
+            @include mixins.flex-center;
+            gap: 48px;
+        }
+        @include mixins.desktop {
+            margin-top: 80px;
+            gap: 105px;
+        }
+    }
+    &__text {
+        @include mixins.tablet-big {
+            font-size: 24px;
+        }
+        & p + p {
+            margin-top: 24px;
+            @include mixins.tablet-big {
+                margin-top: 36px;
+            }
+        }
+    }
+    &__media {
+        margin-top: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include mixins.tablet-big {
+            margin-top: 0;
+            max-width: 50%;
+        }
+        @include mixins.desktop {
+            flex: 0 0 748px;
+            max-width: initial;
+        }
+    }
+}

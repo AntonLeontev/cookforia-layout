@@ -1,0 +1,306 @@
+@use "../../commons/_mixins.scss" as mixins;
+@use "../../commons/_var.scss" as v;
+
+.mk-separate {
+    & .header {
+        background-color: var(--black);
+        padding-bottom: 10px;
+        padding-top: 32px;
+        @include mixins.desktop {
+            padding: 22px 0;
+        }
+    }
+    & .nav {
+        top: 90px;
+        height: calc(100dvh - 90px);
+        height: calc(100vh - 90px);
+        @include mixins.desktop {
+            height: calc(100dvh - 100px);
+            height: calc(100vh - 100px);
+            top: 99px;
+        }
+    }
+}
+.product {
+    padding-top: 147px;
+    @include mixins.desktop {
+        padding-top: 80px;
+    }
+    &__inner {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+    }
+    &__banner {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1.73/1;
+        max-height: 525px;
+        padding: 20px 20px 16px;
+        color: var(--white);
+        @include mixins.desktop {
+            max-height: initial;
+            aspect-ratio: initial;
+            height: auto;
+        }
+        &-text {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            pointer-events: none;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__labels {
+        @include mixins.flex-center;
+        gap: 4px;
+        flex-wrap: wrap;
+        @include mixins.desktop {
+            gap: 10px;
+        }
+    }
+    &__label {
+        padding: 4px 10px;
+        font-size: 12px;
+        border-radius: 30px;
+        background-color: var(--yellow);
+        color: var(--dark);
+        @include mixins.desktop {
+            font-size: 18px;
+        }
+        &--red {
+            font-weight: 600;
+            background-color: #7E151D;
+            color: var(--white);
+        }
+        &--icon {
+            background-color: var(--white);
+            @include mixins.flex-center;
+            gap: 4px;
+            &::after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                @include mixins.svg-bg('martini');
+            }
+        }
+    }
+    &__name {
+        margin-top: auto;
+        font-weight: 600;
+        font-size: 20px;
+        padding-top: 16px;
+        @include mixins.desktop {
+            font-size: 40px;
+        }
+    }
+    &__info {
+        display: flex;
+        gap: 16px;
+        margin-top: 6px;
+        @include mixins.desktop {
+            margin-top: 20px;
+            gap: 63px;
+            font-size: 24px;
+        }
+    }
+    &__price {
+        margin-top: 20px;
+        border-radius: 16px;
+        background-color: var(--white);
+        padding: 26px 20px 30px;
+        @include mixins.desktop {
+            margin-top: 0;
+            flex: 0 0 491px;
+            padding: 40px 20px;
+            font-size: 20px;
+        }
+    }
+    &__logo img {
+        margin: 0 auto;
+        width: 100px;
+        @include mixins.desktop {
+            width: 168px;
+        }
+    }
+    &__price-label {
+        margin-top: 24px;
+        color: var(--gray);
+    }
+    &__address {
+        font-weight: 600;
+        color: var(--yellow);
+        margin-top: 4px;
+        @include mixins.desktop {
+            margin-top: 20px;
+        }
+    }
+    &__parameters {
+        margin-top: 24px;
+        padding: 11px 0;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        @include mixins.desktop {
+            padding: 19px 0;
+            margin-top: 20px;
+        }
+    }
+    &__parameter {
+        @include mixins.flex-center-space;
+        flex-wrap: wrap;
+        gap: 8px;
+        & span:first-child {
+            color: var(--gray);
+        }
+    }
+    &__total {
+        margin-top: 12px;
+        @include mixins.desktop {
+            margin-top: 20px;
+        }
+    }
+    &__box {
+        @include mixins.flex-center-space;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+        @include mixins.desktop {
+            margin-top: 20px;
+        }
+    }
+    &__radio {
+        & input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            &:checked + label::before {
+                outline: 1px solid var(--yellow);
+                background-color: var(--yellow);
+            }
+        }
+        & label {
+            color: var(--gray);
+            @include mixins.flex-center;
+            gap: 12px;
+            @include mixins.desktop {
+                gap: 16px;
+            }
+            &::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                outline: 1px solid var(--gray);
+                border: 2px solid var(--white);
+                background-color: var(--gray);
+                border-radius: 50%;
+                @include mixins.desktop {
+                    width: 13px;
+                    height: 13px;
+                    border: 4px solid var(--white);
+                }
+            }
+        }
+    }
+    &__btn {
+        text-align: center;
+        margin: 36px auto 0;
+        @include mixins.desktop {
+            margin: 40px auto 0;
+        }
+    }
+    &__gallery {
+        margin-top: 20px;
+        @include mixins.desktop {
+            margin-top: 50px;
+            width: calc(100% - 515px);
+        }
+        & .arrows {
+            display: none;
+            @include mixins.desktop {
+                display: block;
+                position: relative;
+                width: 56px;
+            }
+        }
+    }
+    &__gallery-head {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: 600;
+        @include mixins.desktop {
+            font-size: 24px;
+        }
+    }
+    &__slider {
+        margin-top: 10px;
+        @include mixins.desktop {
+            margin-top: 40px;
+        }
+    }
+    &__list {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        padding-bottom: 10px;
+        @include mixins.scrollbar-gray;
+        @include mixins.desktop {
+            overflow: initial;
+            padding: 0;
+            gap: 0;
+        }
+    }
+    &__item {
+        width: 233px;
+        scroll-snap-align: start;
+        &-img {
+            height: 200px;
+        }
+        &-img img {
+            border-radius: 16px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &-name {
+            margin-top: 10px;
+        }
+        &-text {
+            margin-top: 6px;
+            color: var(--gray);
+        }
+    }
+}
