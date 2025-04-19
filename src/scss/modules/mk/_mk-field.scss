@@ -1,0 +1,53 @@
+@use "../../commons/_mixins.scss" as mixins;
+@use "../../commons/_var.scss" as v;
+
+.mk-field {
+    &__inner {
+        margin-top: 20px;
+        @include mixins.tablet-big {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 24px;
+        }
+        @include mixins.desktop-big {
+            margin-top: 80px;
+            grid-template-columns: 1fr 877px;
+        }
+    }
+    &__text {
+        align-self: flex-end;
+        @include mixins.tablet-big {
+            font-size: 24px;
+        }
+    }
+    &__media {
+        margin-top: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include mixins.tablet-big {
+            margin-top: 0;
+            grid-row: 1/3;
+            grid-column: 2/3;
+        }
+        @include mixins.desktop-big {
+            flex: 0 0 877px;
+            max-width: initial;
+        }
+    }
+    &__links {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        @include mixins.tablet-big {
+            flex-direction: row;
+            margin-top: 40px;
+            align-self: flex-start;
+        }
+    }
+    &__link {
+        font-size: 20px;
+        min-width: 251px;
+    }
+}

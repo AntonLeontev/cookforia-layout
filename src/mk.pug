@@ -1,0 +1,26 @@
+include html/components/breadcrumbs
+block variables
+    - var title = 'Мастер-классы'
+    - var page = 'mk'
+    - var cardsBg = true
+    
+doctype html
+html(lang='ru')
+    head
+        include html/head
+    body.body(class=page)
+        .wrapper
+            include html/modules/header
+            +breadcrumbs(
+                { text: 'Мастер-классы' },
+                []
+            )
+            include html/modules/nav
+            main.main
+                include html/modules/mk/descriptor
+                include html/modules/mk/description
+                include html/modules/mk/services
+                include html/modules/cards
+                include html/modules/mk/mk-field
+                include html/modules/faq
+            include html/modules/footer

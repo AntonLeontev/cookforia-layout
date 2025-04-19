@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: ".swiper-pagination-services",
                         clickable: true,
                     },
+                    breakpoints: {
+                        768: {
+                            spaceBetween: 24
+                        }
+                    }
                 });
             } else if (!isMobile && swiperServices) {
                 swiperServices.destroy(true, true);

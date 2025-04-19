@@ -1,35 +1,17 @@
 @use "../../commons/_mixins.scss" as mixins;
 @use "../../commons/_var.scss" as v;
 
-.mk-separate {
-    & .header {
-        background-color: var(--black);
-        padding-bottom: 10px;
-        padding-top: 32px;
-        @include mixins.desktop {
-            padding: 22px 0;
-        }
-    }
-    & .nav {
-        top: 90px;
-        height: calc(100dvh - 90px);
-        height: calc(100vh - 90px);
-        @include mixins.desktop {
-            height: calc(100dvh - 100px);
-            height: calc(100vh - 100px);
-            top: 99px;
-        }
-    }
-}
 .product {
     padding-top: 147px;
     @include mixins.desktop {
         padding-top: 80px;
     }
     &__inner {
-        display: flex;
-        align-items: stretch;
-        gap: 24px;
+        @include mixins.desktop {
+            display: flex;
+            align-items: stretch;
+            gap: 24px;
+        }
     }
     &__banner {
         position: relative;

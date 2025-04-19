@@ -234,6 +234,9 @@ h1,h2,h3,h4,h5,h6 {
         background-color: transparent;
         border: 1px solid var(--black);
         color: var(--black);
+        @include mixins.hover {
+            border: 1px solid var(--yellow);
+        }
     }
 }
 
